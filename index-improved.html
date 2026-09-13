@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W. M. Keck Microscopy Center - University of Washington</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #7b1fa2 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            top: -200px;
+            right: -100px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: white;
+            color: #4a148c;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #6a1b9a;
+            text-decoration: none;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #4a148c;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #6a1b9a;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Equipment Cards */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .equipment-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(106, 27, 154, 0.1);
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(106, 27, 154, 0.15);
+        }
+
+        .equipment-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .equipment-card h4 {
+            padding: 1.5rem 1.5rem 0.5rem;
+            font-size: 1.2rem;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .equipment-card p {
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            padding: 0 1.5rem 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-small {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            background: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-small:hover {
+            background: #4a148c;
+            transform: scale(1.05);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(106, 27, 154, 0.1);
+        }
+
+        .team-card h4 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .team-card .title {
+            color: #6a1b9a;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid #6a1b9a;
+        }
+
+        .faq-item h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #4a148c;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: #bbb;
+            padding: 3rem 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #6a1b9a;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">🔬 Keck Center</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Advanced Light Microscopy</h1>
+            <p class="subtitle">State-of-the-art imaging and analysis services for UW researchers</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">35+</span>
+                    <span class="stat-label">Years of Service</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Images Processed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+            </div>
+
+            <a href="#equipment" class="btn-primary">Explore Equipment</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            Home > Welcome
+        </div>
+
+        <!-- Welcome Section -->
+        <section>
+            <h2>Welcome to the W. M. Keck Microscopy Center</h2>
+            <p>This is an update on the operations and administration of the UW Keck Imaging Center, located in K507. Brian Beliveau, PhD, Associate Professor in Genome Sciences, and Winnie Wang, PhD, MBA, Imaging Scientist at NBIO, manage the Center, including providing training and user support for research projects conducted by Center users.</p>
+            
+            <h3>About Our Facility</h3>
+            <p>The W. M. Keck Microscopy Center provides light microscopy and image analysis services to the University of Washington (UW) research community. We operate as a UW recharge center, supported by the departments of Physiology and Biophysics, Pharmacology, Genome Sciences, and Laboratory Medicine & Pathology.</p>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment">
+            <h2>🔬 Our Equipment</h2>
+            <p>Access cutting-edge microscopy systems and analysis software:</p>
+            
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <img src="images/Leica-SP8X-Confocal-1024x768.jpg" alt="Leica SP8X" class="equipment-image">
+                    <h4>Leica SP8X Confocal</h4>
+                    <p>Advanced confocal imaging with Lightning deconvolution for high-resolution 3D imaging and Z-stack acquisition</p>
+                    <div class="card-footer">
+                        <a href="equipment.html#sp8x-specs" class="btn-small">View Specs</a>
+                        <a href="https://depts.washington.edu/keck/cgi/Calcium38.cgi?Op=ShowIt&CookieParams=1&CalendarName=Leica_SP8X_Confocal&Amount=Month&NavType=Absolute&Type=Block" class="btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="images/Leica_DMI6000-Widefield-1024x768.jpg" alt="Leica Widefield" class="equipment-image">
+                    <h4>Leica Widefield</h4>
+                    <p>Multi-dimensional widefield microscopy for real-time live cell imaging with motorized stages</p>
+                    <div class="card-footer">
+                        <a href="equipment.html#widefield-specs" class="btn-small">View Specs</a>
+                        <a href="https://depts.washington.edu/keck/cgi/Calcium38.cgi?Op=ShowIt&CalendarName=Leica_Inverted&Amount=Month&NavType=Absolute&Type=Block" class="btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="images/Zeiss-LSM880-Confocal.jpg" alt="Zeiss 880" class="equipment-image">
+                    <h4>Zeiss 880 Confocal</h4>
+                    <p>Advanced confocal microscope with exceptional optical sectioning and multi-channel imaging capabilities</p>
+                    <div class="card-footer">
+                        <a href="equipment.html#zeiss880-specs" class="btn-small">View Specs</a>
+                        <button class="btn-small" disabled title="Calendar coming soon">Coming Soon</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="images/Imaris-1024x768.jpg" alt="IMARIS" class="equipment-image">
+                    <h4>IMARIS Analysis</h4>
+                    <p>Professional 3D visualization and image analysis software. FREE for UW students</p>
+                    <div class="card-footer">
+                        <a href="equipment.html#imaris-specs" class="btn-small">View Specs</a>
+                        <a href="https://depts.washington.edu/keck/cgi/Calcium38.cgi?Op=ShowIt&CalendarName=Analysis_IMARIS&Amount=Month&NavType=Absolute&Type=Block" class="btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <h4>🌡️ Environmental Control</h4>
+                    <p>Pecon stage incubator and Warner 35mm dish incubator for long-term live cell imaging</p>
+                    <div class="card-footer">
+                        <a href="equipment.html#widefield-specs" class="btn-small">Learn More</a>
+                        <a href="https://depts.washington.edu/keck/cgi/Calcium38.cgi?Op=ShowIt&CalendarName=Pecon_Incubator&Amount=Month&NavType=Absolute&Type=Block" class="btn-small">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team">
+            <h2>👥 Meet Our Team</h2>
+            <p>Experienced professionals dedicated to supporting your research:</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <h4>Brian Beliveau, PhD</h4>
+                    <div class="title">Director</div>
+                    <p>Associate Professor in Genome Sciences. Leads the Keck Center with expertise in advanced microscopy and image analysis.</p>
+                </div>
+
+                <div class="team-card">
+                    <h4>Winnie Wang, PhD, MBA</h4>
+                    <div class="title">Imaging Scientist & Operations Manager</div>
+                    <p>Expert in image analysis and facility operations. Provides training and support for all microscopy systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h4>How do I book microscope time?</h4>
+                <p>Click "Book Now" on the equipment card, log in with your UW ID, and select your preferred time slot from the calendar.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is IMARIS free for students?</h4>
+                <p>Yes! IMARIS is completely FREE for UW students. Non-students may use it at our standard Image Analysis rate.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do I need training to use the microscopes?</h4>
+                <p>Yes, all users must be trained by our team. Contact us at uwkeckcenter@uw.edu to schedule your training session.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What publications mention the Keck Center?</h4>
+                <p>Publications using the Leica SP8X must acknowledge NIH grant S10 OD016240. See our equipment page for more details.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>📧 Get in Touch</h2>
+            <p>Questions about our equipment or services? We're here to help!</p>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+                <p><strong>Email:</strong> <a href="mailto:uwkeckcenter@uw.edu" style="color: #6a1b9a;">uwkeckcenter@uw.edu</a></p>
+                <p><strong>Location:</strong> Room K507, University of Washington</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9 AM - 5 PM</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Sample Preparation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                    <li><a href="#">Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Supporting Departments</h4>
+                <ul>
+                    <li><a href="#">Physiology & Biophysics</a></li>
+                    <li><a href="#">Pharmacology</a></li>
+                    <li><a href="#">Genome Sciences</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>W. M. Keck Microscopy Center<br>Room K507<br>University of Washington<br><a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 University of Washington - W. M. Keck Microscopy Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
