@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment — W. M. Keck Microscopy Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">Keck</div>
+        <div class="logo-text">
+          <span class="l1">University of Washington</span>
+          <span class="l2">W. M. Keck Microscopy Center</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="equipment.html" class="active">Equipment</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="acknowledgements.html">Acknowledgements</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Equipment</h1>
+      <p>Microscopy systems, environmental controls, and image analysis workstations</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <h2>Overview</h2>
+    <p>The Keck Center houses four imaging systems, two environmental control units, and a dedicated image analysis workstation. All instruments require advance reservation through our <a href="schedule.html">online scheduling system</a>.</p>
+
+    <div class="equipment-grid">
+      <div class="equipment-card">
+        <img src="images/Leica-SP8X-Confocal-1024x768.jpg" alt="Leica SP8X Confocal" class="equipment-card-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="equipment-card-img-placeholder" style="display:none"><span>SP8X</span></div>
+        <div class="equipment-card-body">
+          <div class="equipment-card-title">Confocal — Leica SP8X</div>
+          <p class="equipment-card-desc">White light laser, resonant scanner, HyD detectors with lifetime gating, and Lightning deconvolution for high-resolution 3D imaging.</p>
+          <a href="#sp8x-specs" class="btn-specs">Specifications</a>
+        </div>
+      </div>
+      <div class="equipment-card">
+        <img src="images/Zeiss-LSM880-Confocal.jpg" alt="Zeiss 880 Confocal" class="equipment-card-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="equipment-card-img-placeholder" style="display:none"><span>Z880</span></div>
+        <div class="equipment-card-body">
+          <div class="equipment-card-title">Confocal — Zeiss LSM 880</div>
+          <p class="equipment-card-desc">32-channel GaAsP spectral detector for real-time spectral unmixing, with pulsed lasers for photoactivation and ablation.</p>
+          <a href="#zeiss880-specs" class="btn-specs">Specifications</a>
+        </div>
+      </div>
+      <div class="equipment-card">
+        <img src="images/Leica_DMI6000-Widefield-1024x768.jpg" alt="Leica Inverted Widefield" class="equipment-card-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="equipment-card-img-placeholder" style="display:none"><span>WF</span></div>
+        <div class="equipment-card-body">
+          <div class="equipment-card-title">Widefield — Leica Inverted DMI6000</div>
+          <p class="equipment-card-desc">Motorized stage for mosaic tiling, DIC and phase contrast optics, and full fluorescence filter sets for rapid multi-channel imaging.</p>
+          <a href="#widefield-specs" class="btn-specs">Specifications</a>
+        </div>
+      </div>
+      <div class="equipment-card">
+        <div class="equipment-card-img-placeholder"><span>ENV</span></div>
+        <div class="equipment-card-body">
+          <div class="equipment-card-title">Environmental Control Systems</div>
+          <p class="equipment-card-desc">Pecon stage-top incubator and Warner 35 mm dish incubator for long-term live-cell imaging with temperature and CO&#x2082; control.</p>
+          <a href="schedule.html" class="btn-specs">Book incubator</a>
+        </div>
+      </div>
+      <div class="equipment-card">
+        <img src="images/Imaris-1024x768.jpg" alt="IMARIS Analysis Workstation" class="equipment-card-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="equipment-card-img-placeholder" style="display:none"><span>IMS</span></div>
+        <div class="equipment-card-body">
+          <div class="equipment-card-title">Image Analysis — IMARIS</div>
+          <p class="equipment-card-desc">Full-license 3D/4D analysis suite on a high-performance AMD Threadripper workstation. <strong>Free for UW students.</strong></p>
+          <a href="#imaris-specs" class="btn-specs">Specifications</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="notice-label">Grant acknowledgement</span>
+      <p>All publications using data from the <strong>Leica SP8X Confocal</strong> must acknowledge NIH grant <strong>S10 OD016240</strong>. The scan head electronics, CUDA workstation, and LASX Expert software were funded by the <a href="https://uwstf.org/" target="_blank">UW Student Technology Fee</a>.</p>
+    </div>
+
+    <!-- SP8X -->
+    <h2 id="sp8x-specs" style="margin-top:2.5rem">Leica SP8X Confocal</h2>
+
+    <div class="spec-block">
+      <div class="spec-block-header">
+        Microscope Base &amp; Stages
+      </div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Leica DMI6000 inverted microscope base</li>
+            <li>Motorized XY stage — mosaic tiling and multi-point live imaging</li>
+            <li>Motorized Z-galvo stage for rapid axial movement</li>
+            <li>Adaptive Focus Control (AFC) for focus maintenance during tiling and live imaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Objectives</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <div class="spec-group-title">Dry</div>
+          <ul><li>10&times;, 20&times;</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Oil Immersion</div>
+          <ul><li>40&times;, 63&times;</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Water Immersion</div>
+          <ul><li>25&times;, 63&times;</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Laser Lines &amp; Scanning</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <div class="spec-group-title">Tunable</div>
+          <ul><li>470–670 nm White Light Laser (WLL)</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Fixed wavelength</div>
+          <ul><li>405, 458, 476, 488, 496, 514 nm</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Scanning</div>
+          <ul>
+            <li>Resonant scanner for rapid live imaging</li>
+            <li>Trans-PMT detector for DIC imaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Detectors</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>3&times; PMT amplification detectors</li>
+            <li>2&times; photon-counting HyD detectors with lifetime gating</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">
+        Software &amp; Advanced Systems
+        <span class="badge">UWSTF-funded</span>
+      </div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>STP8000 backlit touchpad</li>
+            <li>KLONDIKE scan head electronics</li>
+            <li>Expert CUDA Workstation</li>
+            <li>Leica LASX Expert — Navigator, FRAP, FRET, Lightning Deconvolution modules</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Widefield -->
+    <h2 id="widefield-specs" style="margin-top:2.5rem">Leica Inverted Widefield DMI6000</h2>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Microscope Base &amp; Optics</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Leica DMI6000 inverted base</li>
+            <li>DIC (Differential Interference Contrast) optics</li>
+            <li>Phase contrast optics (long working distance objectives)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Objectives</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <div class="spec-group-title">Dry / Long Working Distance</div>
+          <ul><li>5&times; LWD, 10&times; LWD, 20&times;, 20&times; LWD, 40&times; LWD</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Oil Immersion</div>
+          <ul><li>40&times;, 100&times;</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Water Immersion</div>
+          <ul><li>63&times;</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Fluorescence Filters &amp; Automation</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <div class="spec-group-title">Filter cubes</div>
+          <ul><li>BFP, CFP, GFP, YFP, TexasRed, CY5</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Automation</div>
+          <ul>
+            <li>Motorized filters, shutters, and Z-drive</li>
+            <li>Motorized stage for mosaic tiling and multi-point live imaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Cameras</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Leica DFC365 FX CCD — fluorescence, brightfield, DIC, phase contrast</li>
+            <li>Leica MC170HD Color camera — histological stains (crystal violet, H&amp;E, etc.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMARIS -->
+    <h2 id="imaris-specs" style="margin-top:2.5rem">IMARIS Image Analysis Workstation</h2>
+
+    <div class="spec-block">
+      <div class="spec-block-header">
+        Workstation Hardware
+        <span class="badge">UWSTF-funded</span>
+      </div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Puget Systems AMD Threadripper TRX40 ATX</li>
+            <li>24-core processor</li>
+            <li>4&times; Crucial DDR4-3200 32 GB (128 GB total RAM)</li>
+            <li>Samsung Pro and EVO SSD storage</li>
+            <li>NVIDIA GeForce RTX 3070 8 GB (Founders Edition)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">IMARIS Software Modules — Full License</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Surface, Spot, and Vantage modules for 3D visualization</li>
+            <li>Particle tracking and co-localization analysis</li>
+            <li>XT (Extended Tracking) module</li>
+            <li>Cell module</li>
+            <li>Filament module — neuron and vessel tracing</li>
+            <li>Deconvolution module</li>
+            <li>Batch processing and animation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:1rem">
+      <span class="notice-label">Pricing</span>
+      <p><strong>Free for UW students</strong> (UWSTF-funded). Image Analysis Rate applies for all other users. Advance reservation required via the <a href="schedule.html">scheduling system</a>.</p>
+    </div>
+
+    <!-- Zeiss 880 -->
+    <h2 id="zeiss880-specs" style="margin-top:2.5rem">Zeiss LSM 880 Confocal</h2>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Scan Head &amp; Detectors</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li>Quasar module scan head with 32-channel GaAsP detector</li>
+            <li>Two flanking multialkali PMTs for extended spectral range</li>
+            <li>Real-time spectral unmixing of multiple dyes in a single frame scan</li>
+            <li>Channels optimized for deep-blue and far-red spectrum imaging</li>
+            <li>Liquid-cooled GaAsP and far-red MA PMT — ultra-low noise, enhanced sensitivity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Laser Lines</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <ul>
+            <li><strong>Argon:</strong> 458, 488, 514 nm — CFP, GFP, YFP</li>
+            <li><strong>Diode:</strong> 561 nm — mCherry, mPlum</li>
+            <li><strong>HeNe:</strong> 594 nm — mCherry, mPlum</li>
+            <li><strong>HeNe:</strong> 633 nm — far red</li>
+            <li><strong>Pulsed high-power:</strong> 405 nm and 440 nm — photoactivation and ablation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-block">
+      <div class="spec-block-header">Objectives</div>
+      <div class="spec-block-body">
+        <div class="spec-group">
+          <div class="spec-group-title">Dry</div>
+          <ul><li>5&times;, 10&times;, 20&times;</li></ul>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">Oil Immersion</div>
+          <ul><li>40&times;, 63&times;, 100&times; (no UV)</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem"><a href="schedule.html" class="btn-book-inline">Book instrument time</a></p>
+
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <div class="fb-mark">Keck</div>
+          <span class="fb-name">W. M. Keck Microscopy Center</span>
+        </div>
+        <p>Room K507 &middot; University of Washington &middot; Seattle, WA 98195<br>
+          <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Facility</h4>
+        <ul>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="services.html">Services &amp; Rates</a></li>
+          <li><a href="policies.html">Policies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="references.html">Reference Materials</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="acknowledgements.html">Acknowledgements</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="https://depts.washington.edu/physio/" target="_blank">Physiology &amp; Biophysics</a></li>
+          <li><a href="https://depts.washington.edu/pharm/" target="_blank">Pharmacology</a></li>
+          <li><a href="https://depts.washington.edu/genomics/" target="_blank">Genome Sciences</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 University of Washington &mdash; W. M. Keck Microscopy Center</span>
+      <span><a href="policies.html">Policies</a> &middot; <a href="contact.html">Contact</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

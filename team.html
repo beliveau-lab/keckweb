@@ -1,513 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - Keck Center</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — W. M. Keck Microscopy Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f9f9f9;
-            color: #2c3e50;
-            line-height: 1.6;
-        }
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
 
-        header {
-            background: white;
-            border-bottom: 0.5px solid #e8e8e8;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+    .team-card-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
+    .team-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #e8daf2;
+      border: 2px solid #d0b8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 500;
+      color: #5a3a80;
+      flex-shrink: 0;
+      letter-spacing: -0.04em;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 600;
-            color: #764ba2;
-            font-size: 1rem;
-            padding: 1rem 0;
-            min-width: 180px;
-            text-decoration: none;
-        }
+    .team-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #764ba2 0%, #5a3a80 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
+    .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
 
-        nav {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
+    .team-dept {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--rule);
+      padding-top: 0.75rem;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 0;
-        }
+    .team-dept strong {
+      color: var(--ink-mid);
+    }
 
-        nav li {
-            margin: 0;
-        }
+    .letter-box {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem 2rem;
+      margin: 1.5rem 0;
+      position: relative;
+    }
 
-        nav a {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 1rem;
-            color: #2c3e50;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            border-bottom: 2px solid transparent;
-            position: relative;
-            white-space: nowrap;
-            letter-spacing: -0.2px;
-        }
+    .letter-box::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    }
 
-        nav a:hover {
-            color: #764ba2;
-        }
+    .letter-box .salutation {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
 
-        nav a.active {
-            color: #764ba2;
-            border-bottom-color: #764ba2;
-            font-weight: 600;
-        }
+    .letter-box p {
+      max-width: 68ch;
+    }
 
-        .hero {
-            background: linear-gradient(135deg, #764ba2 0%, #5a3a80 100%);
-            color: white;
-            padding: 5.5rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    .letter-box .signature {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 50%;
-            top: -200px;
-            right: -100px;
-        }
+    .history-timeline {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
 
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: white;
-            letter-spacing: -1px;
-            position: relative;
-            z-index: 1;
-        }
+    .ht-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0 1.2rem;
+      align-items: start;
+    }
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 0;
-            opacity: 0.95;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
-        }
+    .ht-year {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      padding-top: 0.15rem;
+      text-align: right;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+    .ht-body {
+      padding-bottom: 1.2rem;
+      border-left: 1px solid var(--rule);
+      padding-left: 1.2rem;
+      position: relative;
+    }
 
-        .container h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-            font-family: 'Poppins', sans-serif;
-        }
+    .ht-body::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 7px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
 
-        .container h3 {
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            font-family: 'Poppins', sans-serif;
-        }
+    .ht-body p {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      margin: 0;
+      line-height: 1.65;
+    }
 
-        .container p {
-            margin-bottom: 1rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .container ul {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .container li {
-            margin-bottom: 0.6rem;
-            color: #555;
-        }
-
-        .container a {
-            color: #764ba2;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .container a:hover {
-            color: #5a3a80;
-            text-decoration: underline;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .team-card {
-            background: white;
-            border: 0.5px solid #e8e8e8;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            box-shadow: 0 8px 16px rgba(118, 75, 162, 0.1);
-            border-color: #764ba2;
-        }
-
-        .team-card h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .team-card .role {
-            color: #764ba2;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 0.8rem;
-        }
-
-        .team-card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0;
-        }
-
-        footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 3rem 2rem 2rem;
-            margin-top: 3rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            color: white;
-            font-weight: 600;
-        }
-
-        .footer-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #764ba2;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .footer-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(118, 75, 162, 0.15);
-        }
-
-        .footer-card h4 {
-            color: #764ba2;
-            margin: 0 0 0.8rem;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .footer-card p {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .footer-card a {
-            color: #764ba2;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .footer-card a:hover {
-            text-decoration: underline;
-        }
-
-        a.dept-link {
-            text-decoration: none;
-            display: block;
-            transition: transform 0.2s ease;
-        }
-
-        a.dept-link:hover .footer-card {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(118, 75, 162, 0.2);
-            border-left-color: #5a3a80;
-        }
-
-        a.dept-link:hover .footer-card h4 {
-            color: #5a3a80;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            nav a {
-                padding: 1rem 0.75rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav {
-                width: 100%;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                padding: 0.8rem 0.6rem;
-                font-size: 0.85rem;
-            }
-
-            .hero {
-                padding: 4rem 1.5rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .letter-box { padding: 1.2rem 1.4rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">K</div>
-                <span>Keck Center</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="equipment.html">Equipment</a></li>
-                    <li><a href="team.html" class="active">Team</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="policies.html">Policies</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="acknowledgements.html">Acknowledgements</a></li>
-                    <li><a href="references.html">References</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">Keck</div>
+        <div class="logo-text">
+          <span class="l1">University of Washington</span>
+          <span class="l2">W. M. Keck Microscopy Center</span>
         </div>
-    </header>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="team.html" class="active">Team</a></li>
+          <li><a href="acknowledgements.html">Acknowledgements</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <h1>Our Team</h1>
-        <p>Meet the experts behind the Keck Microscopy Center</p>
-    </section>
-
+  <section class="page-hero">
     <div class="container">
-        <h2>Meet Our Team</h2>
-        <p>The Keck Microscopy Center is staffed by experienced professionals dedicated to supporting your research through cutting-edge microscopy and imaging expertise.</p>
+      <h1>Team</h1>
+      <p>The people who manage, operate, and support the W. M. Keck Microscopy Center</p>
+    </div>
+  </section>
 
-        <h3>Leadership</h3>
-        <div class="team-grid">
-            <div class="team-card">
-                <h4>Director</h4>
-                <p class="role">Microscopy & Imaging Science</p>
-                <p>Leads the center's strategic direction and oversees all facility operations and research initiatives.</p>
-            </div>
-            <div class="team-card">
-                <h4>Technical Director</h4>
-                <p class="role">Equipment Management</p>
-                <p>Manages maintenance and operation of all microscopy systems and imaging equipment.</p>
-            </div>
-        </div>
+  <div class="container">
 
-        <h3>Technical Staff</h3>
-        <div class="team-grid">
-            <div class="team-card">
-                <h4>Imaging Specialist</h4>
-                <p class="role">Confocal Microscopy</p>
-                <p>Expert in confocal imaging techniques, system optimization, and advanced image acquisition protocols.</p>
-            </div>
-            <div class="team-card">
-                <h4>Image Analyst</h4>
-                <p class="role">Data Processing</p>
-                <p>Specializes in image processing, analysis, and quantification using industry-standard software.</p>
-            </div>
-            <div class="team-card">
-                <h4>Training Coordinator</h4>
-                <p class="role">User Support</p>
-                <p>Provides comprehensive training, technical support, and consultation for facility users.</p>
-            </div>
-        </div>
-
-        <h3>Contact Our Team</h3>
-        <p>For inquiries about our services, equipment availability, training, or collaboration opportunities, please <a href="contact.html">contact us</a>. Our team is here to help support your research needs.</p>
-
-        <h3>Collaborations</h3>
-        <p>We actively collaborate with researchers from various departments and institutions. If you're interested in partnering with the Keck Microscopy Center or have questions about collaborative research opportunities, don't hesitate to reach out.</p>
+    <div class="letter-box">
+      <div class="salutation">Dear Colleagues,</div>
+      <p>This is an update on the operations and administration of the UW Keck Imaging Center, located in K507. Brian Beliveau, PhD, Associate Professor in Genome Sciences, and Winnie Wang, PhD, MBA, Imaging Scientist at NBIO, manage the Center, including providing training and user support for research projects conducted by Center users.</p>
+      <p>Please direct all questions regarding the Center to <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a>.</p>
+      <div class="signature">Keck Center Steering Committee</div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <div class="footer-card">
-                    <h4>Navigation</h4>
-                    <p><a href="index.html">Home</a> | <a href="equipment.html">Equipment</a> | <a href="team.html">Team</a> | <a href="faq.html">FAQ</a> | <a href="contact.html">Contact</a></p>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <div class="footer-card">
-                    <h4>Documentation & Policies</h4>
-                    <p><a href="policies.html">Facility Policies</a></p>
-                </div>
-                <div class="footer-card">
-                    <h4>Latest Updates</h4>
-                    <p><a href="news.html">News & Updates</a></p>
-                </div>
-                <div class="footer-card">
-                    <h4>Reference Materials</h4>
-                    <p><a href="references.html">Learning Resources</a></p>
-                </div>
-                <div class="footer-card">
-                    <h4>Acknowledgements</h4>
-                    <p><a href="acknowledgements.html">Supporting Institutions</a></p>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Supporting Departments</h4>
-                <a href="https://depts.washington.edu/physio/" target="_blank" class="dept-link">
-                    <div class="footer-card">
-                        <h4>Physiology & Biophysics</h4>
-                        <p>Leading contributors to advanced microscopy research and imaging education programs.</p>
-                    </div>
-                </a>
-                <a href="https://depts.washington.edu/pharm/" target="_blank" class="dept-link">
-                    <div class="footer-card">
-                        <h4>Pharmacology</h4>
-                        <p>Active supporters of cutting-edge imaging methodologies for drug discovery research.</p>
-                    </div>
-                </a>
-                <a href="https://depts.washington.edu/genomics/" target="_blank" class="dept-link">
-                    <div class="footer-card">
-                        <h4>Genome Sciences</h4>
-                        <p>Driving innovation in molecular imaging and biological visualization techniques.</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <div class="footer-card">
-                    <h4>W. M. Keck Microscopy Center</h4>
-                    <p>Room K507<br>University of Washington<br><a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a></p>
-                </div>
-            </div>
+    <h2>Center management</h2>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-avatar">BB</div>
+          <div>
+            <div class="team-name">Brian Beliveau, PhD</div>
+            <div class="team-role">Center Director</div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 University of Washington - Keck Microscopy Center. All rights reserved.</p>
+        <div class="team-dept">
+          <strong>Department of Genome Sciences</strong><br>
+          Associate Professor &mdash; manages Center operations, administration, and research support.
         </div>
-    </footer>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-avatar">WW</div>
+          <div>
+            <div class="team-name">Winnie Wang, PhD, MBA</div>
+            <div class="team-role">Imaging Scientist</div>
+          </div>
+        </div>
+        <div class="team-dept">
+          <strong>NBIO</strong><br>
+          Provides equipment training, user support, and research consultation for Center users.
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="notice-label">Contact the team</span>
+      <p>For all questions regarding equipment, training, scheduling, or research support, email <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a>. We typically reply within one business day.</p>
+    </div>
+
+    <h2 style="margin-top: 2rem">Center history</h2>
+
+    <div class="history-timeline">
+      <div class="ht-item">
+        <div class="ht-year">1990</div>
+        <div class="ht-body">
+          <p>The W. M. Keck Microscopy Center was established as the <em>W. M. Keck Center for Advanced Studies in Neural Signaling</em> through a grant from the W. M. Keck Foundation, enabling researchers in Physiology &amp; Biophysics and Pharmacology to explore how nerve cells acquire, store, and transmit information.</p>
+        </div>
+      </div>
+      <div class="ht-item">
+        <div class="ht-year">Today</div>
+        <div class="ht-body">
+          <p>The Center has grown into a shared imaging facility serving the broader UW research community across Physiology &amp; Biophysics, Pharmacology, Genome Sciences, Laboratory Medicine &amp; Pathology, and many other departments. External, non-UW users are also welcome.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 2rem">Steering Committee</h2>
+    <p>The Keck Center is governed by a Steering Committee drawn from its supporting departments. The committee oversees strategic direction, equipment priorities, and facility policy. For inquiries directed to the Steering Committee, contact <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a>.</p>
+
+    <h3>Supporting departments</h3>
+    <ul>
+      <li>Department of Physiology &amp; Biophysics</li>
+      <li>Department of Pharmacology</li>
+      <li>Department of Genome Sciences</li>
+      <li>Department of Laboratory Medicine &amp; Pathology</li>
+    </ul>
+
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <div class="fb-mark">Keck</div>
+          <span class="fb-name">W. M. Keck Microscopy Center</span>
+        </div>
+        <p>Room K507 &middot; University of Washington &middot; Seattle, WA 98195<br>
+          <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Facility</h4>
+        <ul>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="services.html">Services &amp; Rates</a></li>
+          <li><a href="policies.html">Policies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="references.html">Reference Materials</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+          <li><a href="acknowledgements.html">Acknowledgements</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="https://depts.washington.edu/physio/" target="_blank">Physiology &amp; Biophysics</a></li>
+          <li><a href="https://depts.washington.edu/pharm/" target="_blank">Pharmacology</a></li>
+          <li><a href="https://depts.washington.edu/genomics/" target="_blank">Genome Sciences</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 University of Washington &mdash; W. M. Keck Microscopy Center</span>
+      <span><a href="policies.html">Policies</a> &middot; <a href="contact.html">Contact</a></span>
+    </div>
+  </footer>
+
 </body>
 </html>
