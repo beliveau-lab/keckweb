@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - W. M. Keck Microscopy Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: #764ba2;
+            color: white;
+            padding: 5.5rem 2rem;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1rem;
+            opacity: 1;
+            color: white;
+        }
+
+        .news-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+        }
+
+        .news-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.4rem;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #e8f5f3 0%, #f0fef5 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1abc9c;
+            margin: 1.5rem 0;
+        }
+
+        .success-box h4 {
+            color: #1565c0;
+            margin-bottom: 0.8rem;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .status-icon {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 2.5rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-text .uw-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 1;
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-text .center-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.85;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><div class="logo-image"><img src="images/uw-logo.png" alt="University of Washington"></div><div class="logo-text"><span class="uw-name">University of Washington</span><span class="center-name">🔬 Keck Center</span></div></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#equipment">Equipment</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="acknowledgements.html">Acknowledgements</a></li>
+                    <li><a href="references.html">Reference Materials</a></li>
+                    <li><a href="news.html" class="active">News & Updates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container">
+            <h1>📰 News & Updates</h1>
+            <p>Stay informed about the latest developments and announcements from the Keck Microscopy Center</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > News & Updates
+        </div>
+
+        <!-- News Section -->
+        <section>
+            <h2>Equipment Status & Maintenance</h2>
+
+            <div class="success-box">
+                <h4>✅ All Equipment Operational</h4>
+                <p>All Keck Center equipment is currently operational and available for booking. Regular maintenance schedules are maintained to ensure optimal performance.</p>
+            </div>
+
+            <h3>Current Equipment Status:</h3>
+            <div class="news-item">
+                <div class="status-item">
+                    <span class="status-icon">🟢</span>
+                    <strong>Leica SP8X Confocal</strong>
+                </div>
+                <p style="margin: 0; color: #666;">Operational • Accepting bookings</p>
+            </div>
+
+            <div class="news-item">
+                <div class="status-item">
+                    <span class="status-icon">🟢</span>
+                    <strong>Leica Widefield Microscope</strong>
+                </div>
+                <p style="margin: 0; color: #666;">Operational • Accepting bookings</p>
+            </div>
+
+            <div class="news-item">
+                <div class="status-item">
+                    <span class="status-icon">🟢</span>
+                    <strong>Zeiss 880 Confocal</strong>
+                </div>
+                <p style="margin: 0; color: #666;">Operational • Scheduling updates coming soon</p>
+            </div>
+
+            <div class="news-item">
+                <div class="status-item">
+                    <span class="status-icon">🟢</span>
+                    <strong>IMARIS Image Analysis</strong>
+                </div>
+                <p style="margin: 0; color: #666;">Fully licensed • Available for all users</p>
+            </div>
+
+            <div class="news-item">
+                <div class="status-item">
+                    <span class="status-icon">🟢</span>
+                    <strong>Environmental Control Systems</strong>
+                </div>
+                <p style="margin: 0; color: #666;">Operational • Full capacity</p>
+            </div>
+
+            <hr>
+
+            <h2>📢 Stay Connected</h2>
+
+            <div style="background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%); padding: 2rem; border-radius: 8px; text-align: center; margin: 3rem 0; border-left: 4px solid #667eea;">
+                <p style="margin-bottom: 1rem;">Want to stay informed about Keck Center updates, rate changes, and equipment announcements?</p>
+                <p style="margin: 0;">
+                    <strong>Contact us to subscribe to our mailing list:</strong><br>
+                    <a href="mailto:uwkeckcenter@uw.edu" style="color: #667eea; font-weight: 600;">📧 uwkeckcenter@uw.edu</a>
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>🎯 Coming Soon</h2>
+
+            <div class="news-item">
+                <h4>📅 Zeiss 880 Confocal Online Booking</h4>
+                <p>Calendar system integration for Zeiss 880 equipment reservations</p>
+            </div>
+
+            <div class="news-item">
+                <h4>📊 Updated Pricing Structure</h4>
+                <p>Rates reflecting current operational and maintenance costs</p>
+            </div>
+
+            <div class="news-item">
+                <h4>🎓 Biomedical Imaging Boot Camp</h4>
+                <p>Advanced hands-on training program</p>
+            </div>
+
+            <div class="news-item">
+                <h4>🔬 New Sample Preparation Guides</h4>
+                <p>Expanded resources for optimal sample preparation and imaging</p>
+            </div>
+
+            <hr>
+
+            <h2>💬 Have News to Share?</h2>
+            <p>If you've published a paper using our facilities or have other news to share, please contact us:</p>
+            <div style="background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
+                <p style="margin: 0;">
+                    <strong>📧 Email:</strong> <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a><br>
+                    <strong>📍 Location:</strong> Room K507, University of Washington<br>
+                    <strong>⏰ Hours:</strong> Monday - Friday, 9 AM - 5 PM
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="acknowledgements.html">Acknowledgements</a></li>
+                    <li><a href="references.html">Reference Materials</a></li>
+                    <li><a href="news.html">News & Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Supporting Departments</h4>
+                <div style="display: grid; gap: 0.8rem;">
+                    <a href="https://pbio.uw.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.1); border: 1px solid #667eea; border-radius: 6px; color: #667eea; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Physiology & Biophysics</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">pbio.uw.edu</span>
+                    </a>
+                    <a href="https://depts.washington.edu/phcol/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Pharmacology</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">depts.washington.edu</span>
+                    </a>
+                    <a href="https://www.gs.washington.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Genome Sciences</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">gs.washington.edu</span>
+                    </a>
+                    <a href="https://dlmp.uw.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"><strong style="display: block; margin-bottom: 0.2rem;">Laboratory Medicine & Pathology</strong><span style="font-size: 0.85rem; opacity: 0.8;">dlmp.uw.edu</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>W. M. Keck Microscopy Center<br>Room K507<br>University of Washington<br><a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 University of Washington - W. M. Keck Microscopy Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

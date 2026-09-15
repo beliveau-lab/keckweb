@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies - W. M. Keck Microscopy Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: #764ba2;
+            color: white;
+            padding: 5.5rem 2rem;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1rem;
+            opacity: 1;
+            color: white;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .content-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+        }
+
+        .content-box h4 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe8b6 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #e8f5f3 0%, #f0fef5 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1abc9c;
+            margin: 1.5rem 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 2.5rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-text .uw-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 1;
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-text .center-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.85;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><div class="logo-image"><img src="images/uw-logo.png" alt="University of Washington"></div><div class="logo-text"><span class="uw-name">University of Washington</span><span class="center-name">🔬 Keck Center</span></div></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#equipment">Equipment</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="policies.html" class="active">Policies</a></li>
+                    <li><a href="acknowledgements.html">Acknowledgements</a></li>
+                    <li><a href="references.html">Reference Materials</a></li>
+                    <li><a href="news.html">News & Updates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container">
+            <h1>📋 Center Policies</h1>
+            <p>Guidelines and regulations for responsible facility use</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > Policies
+        </div>
+
+        <!-- Policies Section -->
+        <section>
+            <h2>General Guidelines</h2>
+            <p><strong>Users are expected to operate equipment responsibly and respectfully.</strong> Considerate use is required to maintain access privileges.</p>
+
+            <div class="content-box">
+                <h4>✓ Training Requirement</h4>
+                <p><strong>All users must complete training with the Keck Center Manager before using any equipment.</strong> Untrained users are not permitted to operate equipment.</p>
+            </div>
+
+            <h2>Equipment Care & Maintenance</h2>
+            <p><strong>Users must clean the working area after they are finished imaging.</strong> This includes:</p>
+            <ul>
+                <li>Cleaning objectives and slides</li>
+                <li>Wiping down counter tops</li>
+                <li>Covering the microscope</li>
+                <li>Removing all personal materials from the work area</li>
+            </ul>
+
+            <h2>Biological Materials & Safety</h2>
+            <p><strong>Users MUST inform the Keck Center Manager of any planned live imaging experiments and any health risks associated with work done in the Center.</strong></p>
+            <p>Imaging of BSL-2 samples requires specific approval from the Keck Center Manager and appropriate modifications to your lab's Biological Use Authorization (BUA).</p>
+
+            <h2>Recharge Center Status</h2>
+            <p><strong>The Keck Center operates as a UW recharge center.</strong> Rates are approved through the Office of Management Accounting and Analysis (MAA) and the Dean's Office. Users are expected to follow all UW financial policies.</p>
+
+            <hr>
+
+            <h2>💻 Computer & Data Policy</h2>
+
+            <h3>UW Usage Guidelines</h3>
+            <p><strong>Keck Center computers and telephones are subject to UW usage guidelines.</strong> Users are responsible for following these guidelines when using this equipment. Please review the <a href="https://itconnect.uw.edu/work/appropriate-use/" target="_blank">UW Appropriate Use Policy</a>.</p>
+
+            <h2>Data Management</h2>
+
+            <div class="warning-box">
+                <h4>⚠️ Important Data Guidelines</h4>
+                <ul>
+                    <li><strong>Users should not store data indefinitely on Keck Center computers.</strong> The Keck Center does not take responsibility for stored user data.</li>
+                    <li><strong>Sensitive imaging data must immediately be removed from Keck Center computers after image acquisition.</strong></li>
+                    <li>Users are responsible for backing up and removing their data promptly following imaging</li>
+                    <li>Labs and associated users are responsible for backup and storage of raw (original) imaging data</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>📅 Reservation Policy</h2>
+
+            <h3>Booking System</h3>
+            <p><strong>Reservations for using the equipment are made on the Equipment Sign-Up Page on a first-come, first-served basis.</strong> Users are expected to respect the reservations of other users and finish imaging/file transfers/cleanup by the end of their online reservation time.</p>
+
+            <h3>Adherence to Schedule</h3>
+            <p><strong>Users should adhere to reservation schedule as closely as possible and contact the Keck Center Manager if there are any last-minute changes of plan.</strong></p>
+
+            <div class="success-box">
+                <h4>📌 Reservation Guidelines</h4>
+                <ul>
+                    <li><strong>Lateness of 1 hour or more may result in cancellation of the reservation</strong></li>
+                    <li><strong>No-shows that keep other users blocked from reserving time may be charged for the time they reserved</strong></li>
+                    <li>Please be respectful of other users' time allocations</li>
+                    <li>If you need to cancel, do so as early as possible</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>📞 Have Questions?</h2>
+            <p>For clarification on any of these policies or to discuss specific circumstances, please contact us:</p>
+            <div class="content-box" style="text-align: center;">
+                <p style="margin: 0;">
+                    <strong>Email:</strong> <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a><br>
+                    <strong>Location:</strong> Room K507, University of Washington
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="acknowledgements.html">Acknowledgements</a></li>
+                    <li><a href="references.html">Reference Materials</a></li>
+                    <li><a href="news.html">News & Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Supporting Departments</h4>
+                <div style="display: grid; gap: 0.8rem;">
+                    <a href="https://pbio.uw.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.1); border: 1px solid #667eea; border-radius: 6px; color: #667eea; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Physiology & Biophysics</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">pbio.uw.edu</span>
+                    </a>
+                    <a href="https://depts.washington.edu/phcol/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Pharmacology</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">depts.washington.edu</span>
+                    </a>
+                    <a href="https://www.gs.washington.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Genome Sciences</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">gs.washington.edu</span>
+                    </a>
+                    <a href="https://dlmp.uw.edu/" target="_blank" style="display: block; padding: 0.8rem 1rem; background: rgba(102, 126, 234, 0.05); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 6px; color: #bbb; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                        <strong style="display: block; margin-bottom: 0.2rem;">Laboratory Medicine & Pathology</strong>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">dlmp.uw.edu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>W. M. Keck Microscopy Center<br>Room K507<br>University of Washington<br><a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 University of Washington - W. M. Keck Microscopy Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
