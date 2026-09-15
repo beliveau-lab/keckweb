@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Keck Center</title>
+    <title>Team - Keck Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -174,105 +174,68 @@
             line-height: 1.8;
         }
 
-        .contact-grid {
+        .container ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .container li {
+            margin-bottom: 0.6rem;
+            color: #555;
+        }
+
+        .container a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .container a:hover {
+            color: #5a3a80;
+            text-decoration: underline;
+        }
+
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
-        .contact-card {
+        .team-card {
             background: white;
             border: 0.5px solid #e8e8e8;
             border-radius: 8px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .contact-card:hover {
+        .team-card:hover {
             box-shadow: 0 8px 16px rgba(118, 75, 162, 0.1);
             border-color: #764ba2;
         }
 
-        .contact-card h3 {
-            margin-top: 0;
-            color: #764ba2;
+        .team-card h4 {
             font-size: 1.1rem;
-        }
-
-        .contact-card p {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-card a {
-            color: #764ba2;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            background: white;
-            border: 0.5px solid #e8e8e8;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 0.5px solid #e8e8e8;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #764ba2;
-            box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .btn-submit {
-            display: inline-block;
-            background: #764ba2;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 4px;
-            border: none;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .btn-submit:hover {
-            background: #5a3a80;
-            transform: translateY(-2px);
+        .team-card .role {
+            color: #764ba2;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
         }
 
         footer {
@@ -400,7 +363,7 @@
                 font-size: 2rem;
             }
 
-            .contact-grid {
+            .team-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -421,82 +384,65 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="equipment.html">Equipment</a></li>
-                    <li><a href="team.html">Team</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="policies.html">Policies</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="acknowledgements.html">Acknowledgements</a></li>
                     <li><a href="references.html">References</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Contact Us</h1>
-        <p>Get in touch with the Keck Microscopy Center</p>
+        <h1>Our Team</h1>
+        <p>Meet the experts behind the Keck Microscopy Center</p>
     </section>
 
     <div class="container">
-        <h2>Contact Information</h2>
-        <p>We're here to help! Whether you have questions about equipment, bookings, training, or collaboration opportunities, please don't hesitate to reach out.</p>
+        <h2>Meet Our Team</h2>
+        <p>The Keck Microscopy Center is staffed by experienced professionals dedicated to supporting your research through cutting-edge microscopy and imaging expertise.</p>
 
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3>📍 Location</h3>
-                <p><strong>Room K507</strong></p>
-                <p>University of Washington</p>
-                <p>Seattle, WA 98195</p>
+        <h3>Leadership</h3>
+        <div class="team-grid">
+            <div class="team-card">
+                <h4>Director</h4>
+                <p class="role">Microscopy & Imaging Science</p>
+                <p>Leads the center's strategic direction and oversees all facility operations and research initiatives.</p>
             </div>
-            <div class="contact-card">
-                <h3>📧 Email</h3>
-                <p><a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a></p>
-                <p>We typically respond within 24 business hours.</p>
-            </div>
-            <div class="contact-card">
-                <h3>🕐 Hours</h3>
-                <p><strong>Monday - Friday</strong></p>
-                <p>8:00 AM - 5:00 PM</p>
-                <p>Closed on weekends and holidays</p>
+            <div class="team-card">
+                <h4>Technical Director</h4>
+                <p class="role">Equipment Management</p>
+                <p>Manages maintenance and operation of all microscopy systems and imaging equipment.</p>
             </div>
         </div>
 
-        <h3>Send us a Message</h3>
-        <p>Have a specific question? Fill out the form below and we'll get back to you as soon as possible.</p>
-
-        <div class="contact-form">
-            <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Your full name">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required placeholder="What is this about?">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required placeholder="Please describe your inquiry in detail..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Note: Please ensure the form is properly configured with a backend service to send emails. Replace the form action with your service endpoint.</p>
+        <h3>Technical Staff</h3>
+        <div class="team-grid">
+            <div class="team-card">
+                <h4>Imaging Specialist</h4>
+                <p class="role">Confocal Microscopy</p>
+                <p>Expert in confocal imaging techniques, system optimization, and advanced image acquisition protocols.</p>
+            </div>
+            <div class="team-card">
+                <h4>Image Analyst</h4>
+                <p class="role">Data Processing</p>
+                <p>Specializes in image processing, analysis, and quantification using industry-standard software.</p>
+            </div>
+            <div class="team-card">
+                <h4>Training Coordinator</h4>
+                <p class="role">User Support</p>
+                <p>Provides comprehensive training, technical support, and consultation for facility users.</p>
+            </div>
         </div>
 
-        <h3>Frequently Asked Questions</h3>
-        <p>Before contacting us, you may find the answer to your question in our <a href="faq.html">Frequently Asked Questions</a> section.</p>
+        <h3>Contact Our Team</h3>
+        <p>For inquiries about our services, equipment availability, training, or collaboration opportunities, please <a href="contact.html">contact us</a>. Our team is here to help support your research needs.</p>
 
-        <h3>Research Collaboration</h3>
-        <p>We actively seek research collaborations and partnerships. If you're interested in leveraging our imaging capabilities for your research project, please contact us to discuss potential opportunities and arrangements.</p>
+        <h3>Collaborations</h3>
+        <p>We actively collaborate with researchers from various departments and institutions. If you're interested in partnering with the Keck Microscopy Center or have questions about collaborative research opportunities, don't hesitate to reach out.</p>
     </div>
 
     <footer>
