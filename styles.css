@@ -1521,68 +1521,23 @@ footer {
   .pol-grid { grid-template-columns: 1fr; }
 }
 /* ========================================
-   设备卡片按钮样式 - 完全统一
+   仅影响equipment.html的按钮样式
+   使用特定的类名：.equipment-btn-specs 和 .equipment-btn-book
+   schedule.html 不受影响
    ======================================== */
 
-/* 设备卡片容器 */
-.equipment-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: 1px solid #e8e8e8;
-  border-radius: 8px;
-  overflow: hidden;
-  background: white;
-  transition: box-shadow 0.3s;
-}
-
-.equipment-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* 设备卡片内容 */
-.equipment-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 20px;
-}
-
-/* 设备标题 */
-.equipment-card-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* 设备描述 */
-.equipment-card-desc {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex: 1;
-}
-
-/* ========================================
-   按钮行容器
-   ======================================== */
-
-.button-row {
+/* 按钮行容器 */
+.equipment-button-row {
   display: flex;
   gap: 12px;
-  margin-top: auto;
-  padding-top: 15px;
-  border-top: 1px solid #f0f0f0;
+  margin-top: 15px;
 }
 
 /* ========================================
-   按钮样式 - 完全统一
+   Specification按钮 - 仅equipment.html
    ======================================== */
 
-.btn-specs,
-.btn-book {
+.equipment-btn-specs {
   /* 布局 */
   flex: 1;
   display: inline-flex;
@@ -1621,17 +1576,69 @@ footer {
   text-overflow: ellipsis;
 }
 
-/* 悬停效果 */
-.btn-specs:hover,
-.btn-book:hover {
+/* Specification按钮悬停 */
+.equipment-btn-specs:hover {
   background-color: #5a3a80;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(118, 75, 162, 0.3);
 }
 
-/* 点击效果 */
-.btn-specs:active,
-.btn-book:active {
+.equipment-btn-specs:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(118, 75, 162, 0.2);
+}
+
+/* ========================================
+   Book time按钮 - 仅equipment.html
+   ======================================== */
+
+.equipment-btn-book {
+  /* 布局 */
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* 大小和间距 */
+  padding: 11px 16px;
+  min-height: 44px;
+  
+  /* 文字 */
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  
+  /* 颜色和背景 */
+  color: white;
+  background-color: #764ba2;
+  
+  /* 边框和圆角 */
+  border: none;
+  border-radius: 4px;
+  
+  /* 链接样式 */
+  text-decoration: none;
+  cursor: pointer;
+  
+  /* 过渡效果 */
+  transition: all 0.3s ease;
+  
+  /* 防止文字换行 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Book time按钮悬停 */
+.equipment-btn-book:hover {
+  background-color: #5a3a80;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(118, 75, 162, 0.3);
+}
+
+.equipment-btn-book:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(118, 75, 162, 0.2);
 }
@@ -1641,13 +1648,13 @@ footer {
    ======================================== */
 
 @media (max-width: 768px) {
-  .button-row {
+  .equipment-button-row {
     flex-direction: column;
     gap: 10px;
   }
   
-  .btn-specs,
-  .btn-book {
+  .equipment-btn-specs,
+  .equipment-btn-book {
     width: 100%;
     min-height: 40px;
     padding: 10px 14px;
@@ -1655,37 +1662,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .equipment-card-body {
-    padding: 15px;
-  }
-  
-  .btn-specs,
-  .btn-book {
+  .equipment-btn-specs,
+  .equipment-btn-book {
     font-size: 13px;
     padding: 10px 12px;
     min-height: 38px;
-  }
-}
-
-/* ========================================
-   深色模式支持（可选）
-   ======================================== */
-
-@media (prefers-color-scheme: dark) {
-  .equipment-card {
-    background: #2a2a2a;
-    border-color: #444;
-  }
-  
-  .equipment-card-title {
-    color: #f0f0f0;
-  }
-  
-  .equipment-card-desc {
-    color: #b0b0b0;
-  }
-  
-  .button-row {
-    border-top-color: #444;
   }
 }
