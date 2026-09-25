@@ -1689,7 +1689,12 @@ footer {
 }
 
 .contact-info-stack {
-  min-width: 0;
+  min-width: 280px;
+  width: 280px;
+}
+
+.contact-info-block p {
+  white-space: nowrap;
 }
 
 .cib-label {
