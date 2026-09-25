@@ -115,57 +115,64 @@
   </section>
 
   <!-- Detailed spec section -->
-  <section class="section tinted">
+<section class="section tinted">
     <div class="section-inner">
       <span class="section-label">Specifications</span>
-      <h2 class="section-title">Leica SP8X — detailed specs</h2>
-      <div class="info-box">
-        <span class="notice-label">Grant acknowledgement — required</span>
-        <p>All publications using data from the <strong>Leica SP8X Confocal</strong> must acknowledge NIH grant <strong>S10 OD016240</strong>. Scan head electronics, CUDA workstation, and LASX Expert software were funded by the UW Student Technology Fee (UWSTF).</p>
-      </div>
+      <h2 class="section-title">Zeiss LSM 880 — detailed specs</h2>
       <div class="spec-block">
         <div class="spec-block-header">
-          Leica SP8X Confocal Microscope
-          <span class="badge">NIH S10 OD016240</span>
+          Zeiss LSM 880 Confocal Microscope
         </div>
         <div class="spec-block-body">
           <div class="spec-group">
             <div class="spec-group-title">Laser sources</div>
             <ul>
-              <li>White Light Laser (WLL) — continuously tunable 470–670 nm</li>
-              <li>405 nm, 458 nm, 476 nm, 488 nm, 496 nm, 514 nm (fixed)</li>
+              <li>405 nm diode laser</li>
+              <li>458 nm, 488 nm, 514 nm Argon laser</li>
+              <li>561 nm DPSS laser</li>
+              <li>633 nm HeNe laser</li>
             </ul>
           </div>
           <div class="spec-group">
             <div class="spec-group-title">Scanning &amp; detection</div>
             <ul>
-              <li>Resonant scanner (8,000 Hz) for rapid live-cell imaging</li>
-              <li>Galvo scanner for high-resolution imaging</li>
-              <li>3× PMT amplification detectors</li>
-              <li>2× HyD detectors with time-gating for lifetime measurements</li>
-              <li>Trans-PMT detector for simultaneous DIC/brightfield</li>
+              <li>32-channel GaAsP spectral detector for simultaneous spectral imaging</li>
+              <li>2× PMT detectors for standard fluorescence channels</li>
+              <li>Airyscan detector — 1.7× resolution improvement over diffraction limit</li>
+              <li>Bi-directional scanning up to 8 fps at 512×512</li>
+              <li>Transmitted light detector for DIC/brightfield</li>
+            </ul>
+          </div>
+          <div class="spec-group">
+            <div class="spec-group-title">Airyscan super-resolution</div>
+            <ul>
+              <li>~140 nm lateral resolution, ~400 nm axial resolution</li>
+              <li>Improved signal-to-noise ratio compared to conventional confocal</li>
+              <li>Compatible with all laser lines and standard fluorophores</li>
             </ul>
           </div>
           <div class="spec-group">
             <div class="spec-group-title">Software &amp; analysis</div>
             <ul>
-              <li>LASX Expert (UWSTF-funded) — Lightning deconvolution, FRAP, FRET, spectral unmixing</li>
-              <li>CUDA-enabled GPU workstation for accelerated image processing</li>
+              <li>ZEN Black — acquisition, processing, and analysis</li>
+              <li>Spectral unmixing for multi-fluorophore experiments</li>
+              <li>FRAP, FRET, and time-series modules</li>
+              <li>3D rendering and orthogonal projection</li>
             </ul>
           </div>
           <div class="spec-group">
             <div class="spec-group-title">Objectives available</div>
             <ul>
-              <li>10×/0.40 air — large field of view, tissue sections</li>
-              <li>20×/0.75 air — standard fluorescence</li>
+              <li>10×/0.45 air — large field of view, tissue sections</li>
+              <li>20×/0.80 air — standard fluorescence</li>
               <li>40×/1.30 oil — high-resolution subcellular</li>
-              <li>63×/1.40 oil — maximum resolution single-molecule</li>
+              <li>63×/1.40 oil — maximum resolution, single-molecule imaging</li>
             </ul>
           </div>
         </div>
       </div>
       <div style="margin-top:2rem">
-        <a href="schedule.html" class="btn-primary">Book the SP8X</a>
+        <a href="schedule.html" class="btn-primary">Book the LSM 880</a>
         <a href="contact.html" class="btn-outline" style="margin-left:0.75rem">Contact for questions</a>
       </div>
     </div>
