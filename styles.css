@@ -109,7 +109,7 @@ header {
 .logo-text .l1 {
   font-size: 0.65rem;
   font-weight: 600;
-  color: var(--white-70);
+  color: var(--white);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
