@@ -46,68 +46,71 @@
 
 <div class="container">
 
-    <div class="contact-page-grid">
+  <div class="contact-page-grid">
 
-<div class="contact-info-block">
-  <div class="cib-label" style="font-weight:600;">Location</div>
-  <p style="margin-bottom:0.25rem">Room K507<br>University of Washington<br>Seattle, WA 98195</p>
-  <a href="https://www.washington.edu/maps/" target="_blank" style="font-size:0.85rem; color:var(--purple); text-decoration:none; font-weight:500;">Open campus map →</a>
-</div>
-
-<div class="contact-info-block" style="margin-top:1.5rem; margin-bottom:2rem">
-  <div class="cib-label" style="font-weight:600;">Email</div>
-  <p style="margin-bottom:0">
-    <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a><br>
-    <span style="color:var(--ink-soft)">We typically reply within one business day.</span>
-  </p>
-</div>
+    <!-- 左栏 -->
+    <div class="contact-info-stack">
+      <div class="contact-info-block">
+        <div class="cib-label" style="font-weight:600;">Location</div>
+        <p style="margin-bottom:0.25rem">Room K507<br>University of Washington<br>Seattle, WA 98195</p>
+        <a href="https://www.washington.edu/maps/" target="_blank" style="font-size:0.85rem; color:var(--purple); text-decoration:none; font-weight:500;">Open campus map →</a>
       </div>
 
-      <div>
-        <h2>Send us a message</h2>
-        <p>Use this form for equipment inquiries, training requests, collaboration discussions, or general questions. You may also find answers in our <a href="faq.html">FAQ</a>.</p>
-
-        <div class="contact-form">
-          <form method="POST" action="https://formspree.io/f/xeaojayw">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your full name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@uw.edu">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="affiliation">Affiliation</label>
-              <select id="affiliation" name="affiliation">
-                <option value="">Select one&hellip;</option>
-                <option>UW student</option>
-                <option>UW postdoc / staff</option>
-                <option>UW faculty</option>
-                <option>External researcher</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required placeholder="e.g. Training request — Leica SP8X">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Describe your request or question. Include information about your research group, sample type, and imaging goals if relevant."></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">Send message</button>
-          </form>
-        </div>
+      <div class="contact-info-block" style="margin-top:1.5rem; margin-bottom:2rem">
+        <div class="cib-label" style="font-weight:600;">Email</div>
+        <p style="margin-bottom:0">
+          <a href="mailto:uwkeckcenter@uw.edu">uwkeckcenter@uw.edu</a><br>
+          <span style="color:var(--ink-soft)">We typically reply within one business day.</span>
+        </p>
       </div>
-
     </div>
+
+    <!-- 右栏 -->
+    <div>
+      <h2>Send us a message</h2>
+      <p>Use this form for equipment inquiries, training requests, collaboration discussions, or general questions. You may also find answers in our <a href="faq.html">FAQ</a>.</p>
+
+      <div class="contact-form">
+        <form method="POST" action="https://formspree.io/f/xeaojayw">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@uw.edu">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="affiliation">Affiliation</label>
+            <select id="affiliation" name="affiliation">
+              <option value="">Select one&hellip;</option>
+              <option>UW student</option>
+              <option>UW postdoc / staff</option>
+              <option>UW faculty</option>
+              <option>External researcher</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="e.g. Training request — Leica SP8X">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Describe your request or question. Include information about your research group, sample type, and imaging goals if relevant."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
 
     <!-- Shipping & Deliveries Section -->
     <section style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #f0f0f0;">
