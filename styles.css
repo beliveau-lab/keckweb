@@ -107,9 +107,9 @@ header {
 }
 
 .logo-text .l1 {
-  font-size: 0.6rem;
-  font-weight: 400;
-  color: var(--white-25);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--white-70);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
