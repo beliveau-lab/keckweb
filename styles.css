@@ -230,7 +230,7 @@ nav a.active {
   letter-spacing: -0.05em;
   line-height: 1.0;
   margin-bottom: 1.5rem;
-  max-width: 720px;
+  max-width: none;
   color: var(--white);
 }
 
@@ -243,7 +243,7 @@ nav a.active {
   font-size: 1.1rem;
   color: var(--white-70);
   font-weight: 300;
-  max-width: 580px;
+  max-width: none;
   margin-bottom: 3.5rem;
   line-height: 1.75;
 }
@@ -515,7 +515,7 @@ nav a.active {
   font-size: 0.97rem;
   font-weight: 300;
   line-height: 1.8;
-  max-width: 680px;
+  max-width: none;
 }
 
 .section.dark .section-body { color: var(--white-45); }
