@@ -1674,3 +1674,33 @@ footer {
     min-height: 38px;
   }
 }
+/* ══════════════════════════════════════════
+   CONTACT PAGE GRID
+══════════════════════════════════════════ */
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-page-grid > div {
+  min-width: 0;
+}
+
+.contact-info-stack {
+  min-width: 0;
+}
+
+.cib-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.5rem;
+}
+
+.map-placeholder {
+  display: none;
+}
