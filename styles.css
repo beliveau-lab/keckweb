@@ -178,7 +178,7 @@ nav a.active {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(10,10,15,0.3), rgba(10,10,15,0.3)),  /* 暗色遮罩 */
+    linear-gradient(rgba(10,10,15,0.5), rgba(10,10,15,0.5)),  /* 暗色遮罩 */
     linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
   background-size: auto, 80px 80px, 80px 80px;
