@@ -1709,3 +1709,96 @@ footer {
 .map-placeholder {
   display: none;
 }
+
+/* ══════════════════════════════════════════
+   RATES TABLES (services.html — Billing)
+══════════════════════════════════════════ */
+.container .rates-period { margin-bottom: 1.5rem; }
+.container .rates-period strong { color: var(--ink); }
+
+.rates-group { margin: 2rem 0; }
+
+.container .rates-group h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.75rem;
+}
+
+.rates-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius-lg);
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.rates-table th,
+.rates-table td {
+  text-align: left;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--rule-light);
+  vertical-align: top;
+}
+
+.rates-table tbody tr:last-child td { border-bottom: none; }
+
+.rates-table thead th {
+  background: #f5f2fa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-mid);
+}
+
+.rates-table thead th span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.rates-table td { color: var(--ink-soft); }
+.rates-table td:first-child { color: var(--ink); font-weight: 500; }
+.rates-table td:not(:first-child) {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.rates-table .rate-free {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--green);
+  white-space: normal;
+  margin-top: 0.2rem;
+}
+
+.rates-table td.rate-nocharge { color: var(--green); font-weight: 500; }
+
+.container .rates-note {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0.75rem 0 0;
+}
+.rates-group .rates-note + .rates-table-wrap { margin-top: 0.75rem; }
+
+@media (max-width: 640px) {
+  .rates-table th, .rates-table td { padding: 0.7rem 0.8rem; }
+}
+.rates-table { table-layout: fixed; }
+.rates-table th:first-child, .rates-table td:first-child { width: 44%; }
+.rates-table th:nth-child(2), .rates-table td:nth-child(2) { width: 28%; }
+@media (max-width: 640px) {
+  .rates-table { table-layout: auto; }
+  .rates-table th:first-child, .rates-table td:first-child { width: auto; }
+}
