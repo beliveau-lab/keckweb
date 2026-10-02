@@ -1213,8 +1213,12 @@ nav a.active {
 }
 
 .team-grid-three {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+.team-grid-three .team-card { padding: 2rem 1.5rem; }
+.team-grid-three .team-card-top { gap: 1rem; }
+.team-grid-three .team-avatar-photo { width: 64px; height: 64px; }
 
 .team-card {
   background: #fff;
