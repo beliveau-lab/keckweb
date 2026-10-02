@@ -1212,9 +1212,8 @@ nav a.active {
   margin: 2rem 0;
 }
 
-.team-grid-single {
-  grid-template-columns: 1fr;
-  width: calc(50% - 0.75px);
+.team-grid-three {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .team-card {
@@ -1560,7 +1559,6 @@ footer {
 
   .features-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
-  .team-grid-single { width: auto; }
   .form-row { grid-template-columns: 1fr; }
   .equipment-grid { grid-template-columns: 1fr; }
   .pol-grid { grid-template-columns: 1fr; }
