@@ -298,7 +298,11 @@ nav a.active {
    PAGE HERO
 ══════════════════════════════════════════ */
 .page-hero {
-  background: var(--dark);
+  background-color: var(--dark);
+  background-image: url('images/airyscan-drosophila-egg-chamber.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   padding: 5rem 3rem 4.5rem;
   position: relative;
@@ -310,9 +314,10 @@ nav a.active {
   position: absolute;
   inset: 0;
   background-image:
+    linear-gradient(rgba(10,10,15,0.5), rgba(10,10,15,0.5)),
     linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-  background-size: 80px 80px;
+  background-size: auto, 80px 80px, 80px 80px;
   pointer-events: none;
 }
 
@@ -363,7 +368,7 @@ nav a.active {
 
 .page-hero p {
   font-size: 1.05rem;
-  color: var(--white-45);
+  color: var(--white-70);
   font-weight: 300;
   max-width: none;
   line-height: 1.7;
