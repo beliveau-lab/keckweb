@@ -1493,6 +1493,13 @@ nav a.active {
 .feature-item p { font-size: 1.05rem; color: rgba(255,255,255,0.72); }
 .feature-item a { font-size: 0.98rem; font-weight: 600; margin-top: 1.1rem; }
 
+/* Light sections (e.g. homepage About): larger, darker text */
+.section.light .section-label { font-size: 0.82rem; font-weight: 600; }
+.section.light .section-body { font-size: 1.15rem; font-weight: 400; color: #4a4360; }
+.notice-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.6rem; }
+.info-box { padding: 1.5rem 1.75rem; }
+.info-box p { font-size: 1.08rem; line-height: 1.7; color: rgba(255,255,255,0.85); }
+
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
@@ -1582,6 +1589,33 @@ footer {
 
 .footer-bottom a { color: var(--white-25); text-decoration: none; }
 .footer-bottom a:hover { color: var(--white-45); }
+
+/* ══════════════════════════════════════════
+   READABILITY & RHYTHM (homepage refresh)
+══════════════════════════════════════════ */
+nav a { font-size: 0.9rem; color: var(--white-70); }
+nav ul li { display: flex; }  /* let links fill the bar so they sit vertically centred */
+
+/* Keep the feature grid aligned with the section text column */
+.features-grid {
+  max-width: var(--content-w);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+footer { color: var(--white-70); }
+.footer-brand .fb-name { font-size: 1rem; }
+.footer-brand p { font-size: 0.92rem; color: var(--white-45); max-width: 300px; }
+.footer-brand p a { color: var(--white-70); }
+.footer-col h4 { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+.footer-col ul li { margin-bottom: 0.7rem; }
+.footer-col a { font-size: 0.95rem; color: var(--white-70); }
+.footer-bottom { font-size: 0.85rem; color: var(--white-45); }
+.footer-bottom a { color: var(--white-45); }
+.footer-bottom a:hover { color: var(--white); }
 
 /* ══════════════════════════════════════════
    RESPONSIVE
