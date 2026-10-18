@@ -294,6 +294,50 @@ nav a.active {
   text-transform: uppercase;
 }
 
+/* Hero legibility over the brighter HeLa background */
+.home-hero .eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+}
+.home-hero .eyebrow::before { background: #ffffff; height: 2px; }
+.home-hero h1 { text-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 28px rgba(0,0,0,0.45); }
+.home-hero h1 em { color: #dcc2ff; }
+.home-hero .subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 44rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 18px rgba(0,0,0,0.7);
+}
+.home-hero .btn-secondary {
+  color: #ffffff;
+  font-weight: 600;
+  background: rgba(10,10,15,0.55);
+  border-color: rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.home-hero .btn-secondary:hover { background: rgba(10,10,15,0.75); border-color: #ffffff; }
+.home-hero .hero-stats {
+  background: rgba(10,10,15,0.6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 1.75rem 2.25rem;
+}
+.home-hero .hero-stat { border-right-color: rgba(255,255,255,0.18); padding-right: 1.75rem; margin-right: 1.75rem; }
+.home-hero .hero-stat:last-child { padding-right: 0; margin-right: 0; }
+.home-hero .hero-stat .slbl {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.92);
+}
+
 /* ══════════════════════════════════════════
    PAGE HERO
 ══════════════════════════════════════════ */
@@ -1441,6 +1485,21 @@ nav a.active {
 .feature-item a::after { content: '→'; }
 .feature-item a:hover { color: var(--white); }
 
+/* Larger, higher-contrast text for dark sections and the "What we offer" grid */
+.section.dark .section-label { font-size: 0.82rem; }
+.section.dark .section-body { font-size: 1.15rem; font-weight: 400; color: rgba(255,255,255,0.75); }
+.feature-item .fi-tag { font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
+.feature-item h3 { font-size: 1.35rem; margin-bottom: 0.7rem; }
+.feature-item p { font-size: 1.05rem; color: rgba(255,255,255,0.72); }
+.feature-item a { font-size: 0.98rem; font-weight: 600; margin-top: 1.1rem; }
+
+/* Light sections (e.g. homepage About): larger, darker text */
+.section.light .section-label { font-size: 0.82rem; font-weight: 600; }
+.section.light .section-body { font-size: 1.15rem; font-weight: 400; color: #4a4360; }
+.notice-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.6rem; }
+.info-box { padding: 1.5rem 1.75rem; }
+.info-box p { font-size: 1.08rem; line-height: 1.7; color: rgba(255,255,255,0.85); }
+
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
@@ -1530,6 +1589,33 @@ footer {
 
 .footer-bottom a { color: var(--white-25); text-decoration: none; }
 .footer-bottom a:hover { color: var(--white-45); }
+
+/* ══════════════════════════════════════════
+   READABILITY & RHYTHM (homepage refresh)
+══════════════════════════════════════════ */
+nav a { font-size: 0.9rem; color: var(--white-70); }
+nav ul li { display: flex; }  /* let links fill the bar so they sit vertically centred */
+
+/* Keep the feature grid aligned with the section text column */
+.features-grid {
+  max-width: var(--content-w);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+footer { color: var(--white-70); }
+.footer-brand .fb-name { font-size: 1rem; }
+.footer-brand p { font-size: 0.92rem; color: var(--white-45); max-width: 300px; }
+.footer-brand p a { color: var(--white-70); }
+.footer-col h4 { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+.footer-col ul li { margin-bottom: 0.7rem; }
+.footer-col a { font-size: 0.95rem; color: var(--white-70); }
+.footer-bottom { font-size: 0.85rem; color: var(--white-45); }
+.footer-bottom a { color: var(--white-45); }
+.footer-bottom a:hover { color: var(--white); }
 
 /* ══════════════════════════════════════════
    RESPONSIVE
