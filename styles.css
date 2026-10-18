@@ -2101,3 +2101,325 @@ nav a { padding: 0 0.62rem; }
 .page-hero ~ .section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
 .page-hero ~ .section .section-title { font-size: 1.75rem; margin-bottom: 0.9rem; }
 .page-hero ~ .section .section-body { font-size: 0.97rem; line-height: 1.75; font-weight: 400; color: var(--ink-soft); }
+
+/* ══════════════════════════════════════════
+   INNER PAGES REFRESH
+   Heading-left document sections, a quieter neutral palette, light
+   call-outs instead of heavy dark boxes, and more air between sections.
+   The homepage does not use any of these classes.
+══════════════════════════════════════════ */
+:root {
+  --doc-ink: #16141d;      /* headings */
+  --doc-body: #46424f;     /* running text */
+  --doc-muted: #75717f;    /* secondary text */
+  --doc-line: #e6e3ec;     /* rules */
+  --doc-wash: #f6f4fa;     /* call-out fill */
+  --ink-soft: #46424f;
+}
+
+/* Page hero: more air, and the brand gradient as a closing edge */
+.page-hero {
+  padding: 4.75rem 3rem 4.25rem;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #ef5fb8, #b48cff 50%, #6fd6e6) 1;
+}
+
+/* Document layout */
+.container.doc { padding-top: 4.5rem; padding-bottom: 5.5rem; }
+.doc-intro { max-width: 52rem; padding-bottom: 3.25rem; }
+.doc-intro > :first-child { margin-top: 0; }
+.doc-intro > :last-child { margin-bottom: 0; }
+
+.doc-sec {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  column-gap: 4rem;
+  padding: 3.25rem 0;
+  border-top: 1px solid var(--doc-line);
+}
+.container.doc > .doc-sec:first-child { border-top: 0; padding-top: 0; }
+.container.doc > .doc-sec:last-of-type { padding-bottom: 0; }
+
+.container .doc-head h2,
+.container .doc-head h3 {
+  position: sticky;
+  top: 104px;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--doc-ink);
+}
+.doc-body > :first-child { margin-top: 0; }
+.doc-body > :last-child { margin-bottom: 0; }
+
+.container.doc p,
+.container.doc li { color: var(--doc-body); max-width: 70ch; }
+.container.doc strong { color: var(--doc-ink); }
+.container.doc .doc-body h3 { font-size: 1.08rem; margin-top: 2.25rem; color: var(--doc-ink); }
+.container.doc .doc-body > h3:first-child { margin-top: 0; }
+
+/* Light call-outs on content pages */
+.container .info-box,
+.container .warning-box,
+.container .success-box {
+  border: 0;
+  border-left: 3px solid var(--purple);
+  border-radius: 0 8px 8px 0;
+  background: var(--doc-wash);
+  padding: 1.3rem 1.6rem;
+  margin: 2.25rem 0;
+}
+.container .info-box p { color: var(--doc-body); }
+.container .info-box strong { color: var(--doc-ink); }
+.container .info-box a { color: var(--purple); }
+.container .info-box .notice-label { color: var(--purple); }
+.container .warning-box { border-left-color: #d97706; background: #fdf6ec; }
+.container .success-box { border-left-color: #059669; background: #edf7f2; }
+
+/* Team welcome letter: light, quiet */
+.container .letter-box {
+  background: var(--doc-wash);
+  border: 0;
+  border-radius: 12px;
+  padding: 2.25rem 2.6rem;
+  margin: 0;
+}
+.container .letter-box .salutation { color: var(--doc-ink); }
+.container .letter-box p { color: var(--doc-body); font-size: 0.97rem; }
+.container .letter-box a { color: var(--purple); }
+.container .letter-box .signature { color: var(--doc-muted); }
+
+/* Specification pages: label/value rows instead of a grey panel */
+.spec-list {
+  display: grid;
+  grid-template-columns: minmax(9rem, 13rem) minmax(0, 1fr);
+  margin: 0;
+  border-top: 1px solid var(--doc-line);
+}
+.container .spec-list dt,
+.container .spec-list dd {
+  margin: 0;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--doc-line);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.container .spec-list dt { font-weight: 600; color: var(--doc-ink); padding-right: 1.5rem; }
+.container .spec-list dd { color: var(--doc-body); }
+.container.spec .doc-body ul { margin-top: 0; }
+.container.spec .spec-note { margin-top: 3.5rem; }
+.container.spec .spec-note p { margin: 0; line-height: 1.8; }
+.back-link { margin-top: 2rem; }
+.container .back-link a { font-weight: 600; color: var(--purple); }
+
+@media (max-width: 960px) {
+  .doc-sec { grid-template-columns: 1fr; row-gap: 1.25rem; padding: 2.5rem 0; }
+  .container .doc-head h2, .container .doc-head h3 { position: static; }
+}
+@media (max-width: 700px) {
+  .page-hero { padding: 3.25rem 1.5rem 3rem; }
+  .container.doc { padding-top: 2.75rem; padding-bottom: 3.5rem; }
+  .container .letter-box { padding: 1.6rem 1.5rem; }
+  .spec-list { grid-template-columns: 1fr; }
+  .container .spec-list dt { border-bottom: 0; padding-bottom: 0.2rem; }
+  .container .spec-list dd { padding-top: 0; }
+}
+/* Sections holding a card grid use the full width, heading above */
+.doc-sec:has(> .doc-body > .team-grid, > .doc-body > .resource-grid, > .doc-body > .schedule-grid) {
+  grid-template-columns: 1fr;
+  row-gap: 1.75rem;
+}
+.doc-sec:has(> .doc-body > .team-grid, > .doc-body > .resource-grid, > .doc-body > .schedule-grid) .doc-head h2 { position: static; }
+/* Six booking tiles fill two even rows instead of leaving empty cells */
+@media (min-width: 900px) { .schedule-grid { grid-template-columns: repeat(3, 1fr); } }
+/* Contact: shipping & deliveries */
+.container .doc.shipping { margin-top: 4.5rem; padding-top: 3.25rem; border-top: 1px solid var(--doc-line); }
+.container .doc.shipping .doc-sec { border-top: 0; padding: 0; }
+.ship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+.container .ship-item h3 { margin: 0 0 0.6rem; font-size: 1.08rem; color: var(--doc-ink); }
+.container .ship-item p { color: var(--doc-body); font-size: 0.95rem; }
+.ship-item address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--doc-ink);
+  font-weight: 500;
+  background: var(--doc-wash);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.container .ship-map a { font-weight: 600; }
+@media (max-width: 800px) { .ship-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* ══════════════════════════════════════════
+   INNER PAGES — DARK THEME (matches the homepage)
+   Scoped to <body class="page-inner">; the homepage has no body class.
+══════════════════════════════════════════ */
+body.page-inner {
+  --doc-ink: #ffffff;
+  --doc-body: rgba(255,255,255,0.74);
+  --doc-muted: rgba(255,255,255,0.52);
+  --doc-line: rgba(255,255,255,0.10);
+  --doc-wash: var(--dark-3);
+  --card: #15151e;
+  --card-hover: #1c1c28;
+  --link: var(--purple-xl);
+  --ink: #ffffff;
+  --ink-mid: rgba(255,255,255,0.8);
+  --ink-soft: rgba(255,255,255,0.74);
+  --rule-light: rgba(255,255,255,0.10);
+  background: var(--dark-2);
+  color: var(--doc-body);
+}
+
+/* Surfaces */
+body.page-inner .container,
+body.page-inner .section,
+body.page-inner .section.light,
+body.page-inner .section.tinted { background: var(--dark-2); }
+body.page-inner .section.tinted { background: var(--dark); }
+
+/* Type */
+body.page-inner h1, body.page-inner h2, body.page-inner h3, body.page-inner h4,
+body.page-inner .section-title,
+body.page-inner .container h2, body.page-inner .container h3 { color: var(--doc-ink); }
+body.page-inner .container p, body.page-inner .container li,
+body.page-inner .section-body, body.page-inner .page-hero ~ .section .section-body { color: var(--doc-body); }
+body.page-inner .container strong { color: var(--doc-ink); }
+body.page-inner .container a, body.page-inner .section a:not([class]) { color: var(--link); }
+body.page-inner .container hr { border-color: var(--doc-line); }
+
+/* Call-outs: same dark boxes as the homepage About section */
+body.page-inner .container .info-box { background: var(--dark-3); border-left-color: var(--purple-lt); }
+body.page-inner .container .info-box p { color: var(--doc-body); }
+body.page-inner .container .info-box .notice-label,
+body.page-inner .container .info-box a { color: var(--purple-xl); }
+body.page-inner .container .warning-box { background: rgba(217,119,6,0.12); border-left-color: #f59e0b; }
+body.page-inner .container .warning-box p { color: rgba(255,255,255,0.8); }
+body.page-inner .container .warning-box .notice-label { color: #fbbf24; }
+body.page-inner .container .warning-box a { color: #fcd34d; }
+body.page-inner .container .success-box { background: rgba(5,150,105,0.12); border-left-color: #10b981; }
+body.page-inner .container .success-box p { color: rgba(255,255,255,0.8); }
+body.page-inner .container .success-box a { color: #a7f3d0; }
+body.page-inner .container .success-box .notice-label { color: #6ee7b7; }
+body.page-inner .container .letter-box { background: var(--dark-3); }
+body.page-inner .container .letter-box a { color: var(--purple-xl); }
+
+/* Buttons */
+body.page-inner .btn-primary, body.page-inner .container a.btn-book-inline { background: var(--purple); color: #fff; }
+body.page-inner .btn-primary:hover, body.page-inner .container a.btn-book-inline:hover { background: var(--purple-lt); }
+body.page-inner .btn-outline { color: #fff; border-color: rgba(255,255,255,0.35); }
+
+/* Cards and grids */
+body.page-inner .equipment-grid,
+body.page-inner .schedule-grid,
+body.page-inner .resource-grid,
+body.page-inner .team-grid { background: var(--doc-line) !important; border-color: var(--doc-line); }
+body.page-inner .equipment-card,
+body.page-inner .btn-book,
+body.page-inner .resource-card,
+body.page-inner .team-card { background: var(--card); border-color: var(--doc-line); color: var(--doc-body); }
+body.page-inner .equipment-card:hover,
+body.page-inner .btn-book:hover,
+body.page-inner .resource-card:hover { background: var(--card-hover); }
+body.page-inner .btn-book:disabled:hover { background: var(--card); }
+body.page-inner .equipment-card-title,
+body.page-inner .btn-book .bk-label,
+body.page-inner .resource-card h3,
+body.page-inner .team-name { color: #fff; }
+body.page-inner .equipment-card-desc,
+body.page-inner .btn-book .bk-sub,
+body.page-inner .resource-card p,
+body.page-inner .team-dept { color: var(--doc-body); }
+body.page-inner .team-dept strong { color: #fff; }
+body.page-inner .resource-card .rc-tag,
+body.page-inner .team-role,
+body.page-inner .spec-group-title { color: var(--purple-xl); }
+body.page-inner .resource-card .rc-links a { color: var(--purple-xl); }
+
+/* Rates tables */
+body.page-inner .rates-table { border-color: var(--doc-line); }
+body.page-inner .rates-table thead th { background: var(--dark-3); color: rgba(255,255,255,0.85); border-color: var(--doc-line); }
+body.page-inner .rates-table thead th span { color: var(--doc-muted); }
+body.page-inner .rates-table td { color: var(--doc-body); border-color: var(--doc-line); }
+body.page-inner .rates-table td:first-child { color: #fff; }
+body.page-inner .rates-table td.rate-nocharge { color: #6ee7b7; }
+body.page-inner .container .rates-group h4 { color: var(--purple-xl); }
+body.page-inner .container .rates-note { color: var(--doc-muted); }
+
+/* FAQ */
+body.page-inner .faq-item, body.page-inner .faq-item:first-child { border-color: var(--doc-line); }
+body.page-inner .faq-question { color: #fff; }
+body.page-inner .faq-question:hover,
+body.page-inner .faq-item.active .faq-question { color: var(--purple-xl); }
+body.page-inner .faq-answer p { color: var(--doc-body); }
+
+/* Contact form */
+body.page-inner .contact-form { background: var(--card); border-color: var(--doc-line); }
+body.page-inner .form-group label { color: rgba(255,255,255,0.85); }
+body.page-inner .form-group input,
+body.page-inner .form-group select,
+body.page-inner .form-group textarea { background: var(--dark); color: #fff; border-color: rgba(255,255,255,0.16); }
+body.page-inner .form-group input::placeholder,
+body.page-inner .form-group textarea::placeholder { color: rgba(255,255,255,0.38); }
+body.page-inner .btn-submit { background: var(--purple); color: #fff; }
+body.page-inner .cib-label { color: var(--purple-xl); }
+body.page-inner .contact-info-block p { color: var(--doc-body); }
+
+/* Equipment page spec block */
+body.page-inner .spec-block { background: var(--card); border-color: var(--doc-line); }
+body.page-inner .spec-block-body li, body.page-inner .spec-block-body p { color: var(--doc-body); }
+body.page-inner .ship-item address { color: #fff; }
+body.page-inner .services-note { background: var(--dark-3); border-color: var(--doc-line); }
+body.page-inner .services-note p { color: var(--doc-body); }
+body.page-inner .btn-book .bk-soon { background: rgba(255,255,255,0.08); color: var(--doc-muted); }
+body.page-inner .ht-year { color: var(--purple-xl); }
+.cib-link { font-size: 0.9rem; font-weight: 500; text-decoration: none; }
+body.page-inner .container a.cib-link { color: var(--purple-xl); }
+/* Equipment grid: no grey filler cell; cards carry their own hairline */
+body.page-inner .equipment-grid { background: var(--dark-2) !important; gap: 0; }
+body.page-inner .equipment-card { box-shadow: 0 0 0 0.5px var(--doc-line); }
+
+/* ══════════════════════════════════════════
+   HIGHER TEXT CONTRAST on dark pages
+══════════════════════════════════════════ */
+body.page-inner {
+  --doc-body: rgba(255,255,255,0.88);
+  --doc-muted: rgba(255,255,255,0.68);
+  --ink-mid: rgba(255,255,255,0.92);
+  --ink-soft: rgba(255,255,255,0.88);
+  --doc-line: rgba(255,255,255,0.14);
+  --link: #d9bff2;
+}
+body.page-inner .container .warning-box p,
+body.page-inner .container .success-box p { color: rgba(255,255,255,0.92); }
+body.page-inner .rates-table thead th,
+body.page-inner .form-group label { color: #fff; }
+body.page-inner .resource-card .rc-tag,
+body.page-inner .team-role,
+body.page-inner .spec-group-title,
+body.page-inner .cib-label,
+body.page-inner .container .info-box .notice-label,
+body.page-inner .container .rates-group h4,
+body.page-inner .ht-year { color: #d9bff2; }
+body.page-inner .resource-card .rc-links a,
+body.page-inner .container a.cib-link,
+body.page-inner .container .info-box a,
+body.page-inner .container .letter-box a { color: #d9bff2; }
+body.page-inner .container .letter-box .signature { color: rgba(255,255,255,0.7); }
+body.page-inner .form-group input::placeholder,
+body.page-inner .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+body.page-inner .btn-book:disabled { opacity: 0.6; }
+
+/* Homepage dark sections: same text levels */
+.section.dark .section-body { color: rgba(255,255,255,0.88); }
+.feature-item p { color: rgba(255,255,255,0.86); }
+.feature-item .fi-tag, .feature-item a { color: #d9bff2; }
+.hero-stat .slbl { color: #fff; }
+footer, .footer-col a, .footer-brand p a { color: rgba(255,255,255,0.82); }
+.footer-brand p, .footer-bottom, .footer-bottom a { color: rgba(255,255,255,0.62); }
+.footer-col h4 { color: rgba(255,255,255,0.7); }

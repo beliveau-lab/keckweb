@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css?v=5">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
-<body>
+<body class="page-inner">
 
   <header>
     <div class="header-container">
@@ -38,82 +38,89 @@
 
   <section class="page-hero">
     <div class="inner">
-      <div class="eyebrow">EQUIPMENT SPECIFICATIONS</div>
       <h1>Zeiss LSM 880</h1>
       <p>Confocal Microscopy System</p>
     </div>
   </section>
 
-  <div class="container">
+  <div class="container doc spec">
+    <section class="doc-sec">
+      <div class="doc-head"><h3>Optical Configuration</h3></div>
+      <div class="doc-body">
+          <dl class="spec-list">
+            <dt>Scan Head</dt>
+            <dd>High-speed LSM confocal scanner with simultaneous multi-wavelength detection</dd>
+        
+            <dt>Detector Array</dt>
+            <dd>32-channel GaAsP (Gallium Arsenide Phosphide) spectral detector</dd>
+        
+            <dt>Detection Range</dt>
+            <dd>400-690 nm with 10.7 nm wavelength resolution per channel</dd>
+        
+            <dt>Laser Lines</dt>
+            <dd>405nm, 458nm, 488nm, 514nm, 561nm, 633nm diode and solid-state lasers</dd>
+        
+            <dt>Objective Lenses</dt>
+            <dd>Plan-Apochromat 63x 1.40 NA Oil, 40x 1.30 NA Oil, 25x 0.80 NA Water, 20x and 10x air</dd>
+          </dl>
+      </div>
+    </section>
 
-    <h2 style="color: #764ba2; margin-bottom: 30px;">System Specifications</h2>
+    <section class="doc-sec">
+      <div class="doc-head"><h3>Image Acquisition</h3></div>
+      <div class="doc-body">
+          <dl class="spec-list">
+            <dt>Spatial Resolution</dt>
+            <dd>XY: ~140 nm (lateral), Z: ~400 nm (axial) with 63x 1.40 NA objective</dd>
+        
+            <dt>Spectral Resolution</dt>
+            <dd>Independent detection of up to 32 wavelength bands simultaneously</dd>
+        
+            <dt>Scan Speed</dt>
+            <dd>Up to 40 Hz at 1024×1024 pixel resolution</dd>
+        
+            <dt>Pinhole</dt>
+            <dd>Electronically adjustable, 0.5-600 μm with fast switching</dd>
+          </dl>
+      </div>
+    </section>
 
-    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-bottom: 40px;">
-      
-      <h3 style="color: #333; margin-top: 0; border-bottom: 2px solid #764ba2; padding-bottom: 10px;">Optical Configuration</h3>
-      <dl style="margin: 20px 0;">
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Scan Head</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">High-speed LSM confocal scanner with simultaneous multi-wavelength detection</dd>
+    <section class="doc-sec">
+      <div class="doc-head"><h3>Advanced Features</h3></div>
+      <div class="doc-body">
+          <dl class="spec-list">
+            <dt>Spectral Unmixing</dt>
+            <dd>Real-time linear unmixing of complex fluorophore combinations</dd>
         
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Detector Array</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">32-channel GaAsP (Gallium Arsenide Phosphide) spectral detector</dd>
+            <dt>Live-Cell Imaging</dt>
+            <dd>Ideal for time-lapse and multi-point experiments with minimal photobleaching</dd>
         
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Detection Range</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">400-690 nm with 10.7 nm wavelength resolution per channel</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Laser Lines</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">405nm, 458nm, 488nm, 514nm, 561nm, 633nm diode and solid-state lasers</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Objective Lenses</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Plan-Apochromat 63x 1.40 NA Oil, 40x 1.30 NA Oil, 25x 0.80 NA Water, 20x and 10x air</dd>
-      </dl>
+            <dt>Tile Scan</dt>
+            <dd>Motorized stage enables large area imaging with automatic montage</dd>
+          </dl>
+      </div>
+    </section>
 
-      <h3 style="color: #333; margin-top: 30px; border-bottom: 2px solid #764ba2; padding-bottom: 10px;">Image Acquisition</h3>
-      <dl style="margin: 20px 0;">
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Spatial Resolution</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">XY: ~140 nm (lateral), Z: ~400 nm (axial) with 63x 1.40 NA objective</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Spectral Resolution</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Independent detection of up to 32 wavelength bands simultaneously</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Scan Speed</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Up to 40 Hz at 1024×1024 pixel resolution</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Pinhole</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Electronically adjustable, 0.5-600 μm with fast switching</dd>
-      </dl>
+    <section class="doc-sec">
+      <div class="doc-head"><h3>Software & Processing</h3></div>
+      <div class="doc-body">
+          <dl class="spec-list">
+            <dt>Control Software</dt>
+            <dd>Zeiss ZEN with advanced image processing and AI-assisted deconvolution</dd>
+          </dl>
+      </div>
+    </section>
 
-      <h3 style="color: #333; margin-top: 30px; border-bottom: 2px solid #764ba2; padding-bottom: 10px;">Advanced Features</h3>
-      <dl style="margin: 20px 0;">
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Spectral Unmixing</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Real-time linear unmixing of complex fluorophore combinations</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Live-Cell Imaging</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Ideal for time-lapse and multi-point experiments with minimal photobleaching</dd>
-        
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Tile Scan</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Motorized stage enables large area imaging with automatic montage</dd>
-      </dl>
-
-      <h3 style="color: #333; margin-top: 30px; border-bottom: 2px solid #764ba2; padding-bottom: 10px;">Software & Processing</h3>
-      <dl style="margin: 20px 0;">
-        <dt style="font-weight: bold; color: #333; margin-top: 15px;">Control Software</dt>
-        <dd style="margin: 5px 0 0 0; color: #666;">Zeiss ZEN with advanced image processing and AI-assisted deconvolution</dd>
-      </dl>
-
-    </div>
-
-    <div style="background: #f0f8ff; padding: 20px; border-left: 4px solid #764ba2; border-radius: 4px; margin-bottom: 40px;">
-      <p style="margin: 0; color: #333;">
+    <div class="info-box spec-note">
+      <p>
         <strong>Best for:</strong> Complex multi-label experiments with spectral separation<br>
-        <strong>Contact:</strong> <a href="contact.html" style="color: #764ba2;">Request training or schedule time</a>
+        <strong>Contact:</strong> <a href="contact.html">Request training or schedule time</a>
       </p>
     </div>
 
-    <div style="text-align: center;">
-      <a href="equipment.html" style="color: #764ba2; text-decoration: none; font-weight: bold;">← Back to Equipment</a>
+    <div class="back-link">
+      <a href="equipment.html">← Back to Equipment</a>
     </div>
-
   </div>
 
   <footer>
