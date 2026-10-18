@@ -1618,6 +1618,61 @@ footer { color: var(--white-70); }
 .footer-bottom a:hover { color: var(--white); }
 
 /* ══════════════════════════════════════════
+   SITE-WIDE TYPE SCALE (readability pass)
+   One place to tune: base size, body copy, and minimum sizes for labels.
+══════════════════════════════════════════ */
+:root { --ink-soft: #564d6e; }              /* darker body grey (was #6e6488) */
+@media (min-width: 1281px) { html { font-size: 17px; } }
+nav a { padding: 0 0.62rem; }
+@media (min-width: 1001px) and (max-width: 1240px) {
+  .header-container { padding: 0 1.5rem; gap: 1rem; }
+  nav a { padding: 0 0.45rem; font-size: 0.8rem; }
+}
+@media (min-width: 1001px) and (max-width: 1080px) {
+  nav a { padding: 0 0.34rem; font-size: 0.76rem; }
+}
+
+/* Page heroes */
+.page-hero::before {
+  background-image:
+    linear-gradient(90deg, rgba(10,10,15,0.55) 0%, rgba(10,10,15,0.25) 50%, rgba(10,10,15,0.05) 100%),
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+}
+.page-hero h1 { text-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 24px rgba(0,0,0,0.45); }
+.page-hero p, .page-hero .eyebrow { text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.75); }
+.page-hero .eyebrow { font-size: 0.88rem; font-weight: 700; color: #ffffff; letter-spacing: 0.14em; }
+.page-hero .eyebrow::before { background: #ffffff; height: 2px; }
+.page-hero p { font-size: 1.3rem; font-weight: 500; color: #ffffff; }
+
+/* Section labels everywhere (not only dark/light sections) */
+.section-label { font-size: 0.8rem; font-weight: 600; }
+
+/* Body copy in content pages */
+.container h2 { font-size: 2rem; margin-bottom: 1.1rem; }
+.container h3 { font-size: 1.25rem; margin-bottom: 0.7rem; }
+.container p, .container li { font-size: 1.05rem; }
+
+/* Card and list text */
+.equipment-card-desc, .resource-card p, .team-dept { font-size: 0.98rem; }
+.btn-book .bk-sub { font-size: 0.9rem; }
+
+/* Minimum sizes for small uppercase/mono labels */
+.logo-text .l1 { font-size: 0.78rem; }
+.resource-card .rc-tag,
+.spec-group-title,
+.cib-label,
+.btn-book .bk-badge,
+.btn-book .bk-soon { font-size: 0.74rem; }
+.team-role { font-size: 0.8rem; }
+.container .rates-group h4 { font-size: 0.82rem; }
+.rates-table thead th { font-size: 0.8rem; }
+
+/* Notice labels on light boxes: darker for contrast */
+.warning-box .notice-label { color: #b45309; }
+.success-box .notice-label { color: #047857; }
+
+/* ══════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media (max-width: 1000px) {
@@ -1625,6 +1680,13 @@ footer { color: var(--white-70); }
   .features-grid { grid-template-columns: 1fr 1fr; }
   .org-grid, .resource-grid { grid-template-columns: 1fr; }
   .pol-grid { grid-template-columns: 1fr; }
+
+  /* Tablet: stack logo above a scrollable nav (was overflowing 701–1000px) */
+  .header-container { flex-direction: column; padding: 0; gap: 0; }
+  .logo { padding: 1rem 2rem; width: 100%; border-bottom: 1px solid var(--rule); }
+  nav { width: 100%; overflow-x: auto; }
+  nav ul { width: max-content; padding: 0 1.4rem; }
+  nav a { padding: 0.8rem 0.6rem; font-size: 0.85rem; }
 }
 
 @media (max-width: 700px) {
@@ -1830,6 +1892,12 @@ footer { color: var(--white-70); }
   white-space: nowrap;
 }
 
+@media (max-width: 800px) {
+  .contact-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-info-stack { min-width: 0; width: auto; }
+  .contact-info-block p { white-space: normal; }
+}
+
 .cib-label {
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -1972,3 +2040,22 @@ footer { color: var(--white-70); }
 }
 
 .ht-body p { margin: 0; }
+
+/* ══════════════════════════════════════════
+   TYPE SCALE — overrides for rules defined later in this file
+══════════════════════════════════════════ */
+.cib-label { font-size: 0.74rem; }
+.container .rates-group h4 { font-size: 0.82rem; }
+.rates-table thead th { font-size: 0.8rem; }
+.container .rates-note { font-size: 0.95rem; }
+.form-group label { font-size: 0.85rem; }
+.success-box a { color: #047857; }
+/* Inline CTA buttons inside content: keep white text (was overridden by .container a) */
+.container a.btn-book-inline { color: #fff; font-size: 0.95rem; }
+.container a.btn-book-inline:hover { text-decoration: none; }
+/* Align content pages' text column with page-hero and section text (same 1080px column) */
+.container { max-width: calc(var(--content-w) + 6rem); }
+@media (max-width: 700px) { .container { max-width: none; } }
+/* Contact sidebar: let longer lines wrap instead of running under the form */
+.contact-info-block p { white-space: normal; }
+.resource-card .rc-links a { font-size: 0.92rem; }
