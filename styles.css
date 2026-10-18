@@ -2383,3 +2383,43 @@ body.page-inner .container a.cib-link { color: var(--purple-xl); }
 /* Equipment grid: no grey filler cell; cards carry their own hairline */
 body.page-inner .equipment-grid { background: var(--dark-2) !important; gap: 0; }
 body.page-inner .equipment-card { box-shadow: 0 0 0 0.5px var(--doc-line); }
+
+/* ══════════════════════════════════════════
+   HIGHER TEXT CONTRAST on dark pages
+══════════════════════════════════════════ */
+body.page-inner {
+  --doc-body: rgba(255,255,255,0.88);
+  --doc-muted: rgba(255,255,255,0.68);
+  --ink-mid: rgba(255,255,255,0.92);
+  --ink-soft: rgba(255,255,255,0.88);
+  --doc-line: rgba(255,255,255,0.14);
+  --link: #d9bff2;
+}
+body.page-inner .container .warning-box p,
+body.page-inner .container .success-box p { color: rgba(255,255,255,0.92); }
+body.page-inner .rates-table thead th,
+body.page-inner .form-group label { color: #fff; }
+body.page-inner .resource-card .rc-tag,
+body.page-inner .team-role,
+body.page-inner .spec-group-title,
+body.page-inner .cib-label,
+body.page-inner .container .info-box .notice-label,
+body.page-inner .container .rates-group h4,
+body.page-inner .ht-year { color: #d9bff2; }
+body.page-inner .resource-card .rc-links a,
+body.page-inner .container a.cib-link,
+body.page-inner .container .info-box a,
+body.page-inner .container .letter-box a { color: #d9bff2; }
+body.page-inner .container .letter-box .signature { color: rgba(255,255,255,0.7); }
+body.page-inner .form-group input::placeholder,
+body.page-inner .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+body.page-inner .btn-book:disabled { opacity: 0.6; }
+
+/* Homepage dark sections: same text levels */
+.section.dark .section-body { color: rgba(255,255,255,0.88); }
+.feature-item p { color: rgba(255,255,255,0.86); }
+.feature-item .fi-tag, .feature-item a { color: #d9bff2; }
+.hero-stat .slbl { color: #fff; }
+footer, .footer-col a, .footer-brand p a { color: rgba(255,255,255,0.82); }
+.footer-brand p, .footer-bottom, .footer-bottom a { color: rgba(255,255,255,0.62); }
+.footer-col h4 { color: rgba(255,255,255,0.7); }
