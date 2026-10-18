@@ -1485,6 +1485,14 @@ nav a.active {
 .feature-item a::after { content: '→'; }
 .feature-item a:hover { color: var(--white); }
 
+/* Larger, higher-contrast text for dark sections and the "What we offer" grid */
+.section.dark .section-label { font-size: 0.82rem; }
+.section.dark .section-body { font-size: 1.15rem; font-weight: 400; color: rgba(255,255,255,0.75); }
+.feature-item .fi-tag { font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
+.feature-item h3 { font-size: 1.35rem; margin-bottom: 0.7rem; }
+.feature-item p { font-size: 1.05rem; color: rgba(255,255,255,0.72); }
+.feature-item a { font-size: 0.98rem; font-weight: 600; margin-top: 1.1rem; }
+
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
