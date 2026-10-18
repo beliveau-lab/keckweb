@@ -2059,3 +2059,13 @@ nav a { padding: 0 0.62rem; }
 /* Contact sidebar: let longer lines wrap instead of running under the form */
 .contact-info-block p { white-space: normal; }
 .resource-card .rc-links a { font-size: 0.92rem; }
+
+/* ══════════════════════════════════════════
+   LOGO MARK + fixed-size header wordmark
+   (px, not rem, so the header looks identical on every page and screen width)
+══════════════════════════════════════════ */
+.logo-mark-img { width: 36px; height: 36px; flex-shrink: 0; display: block; }
+.fb-mark-img { width: 30px; height: 30px; flex-shrink: 0; display: block; }
+.logo { gap: 12px; }
+.logo-text .l1 { font-size: 12.5px; letter-spacing: 0.1em; }
+.logo-text .l2 { font-size: 15.5px; }

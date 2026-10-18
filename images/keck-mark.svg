@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="W. M. Keck Microscopy Center">
+  <defs>
+    <linearGradient id="kA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f06bbd"/>
+      <stop offset="0.5" stop-color="#b48cff"/>
+      <stop offset="1" stop-color="#5fd3e4"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="#14101b" stroke="#ffffff" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M20 15v34" stroke="#fff" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M46 15 30.5 32 46 49" fill="none" stroke="url(#kA)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="30.5" cy="32" r="10" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1.5"/>
+  <circle cx="30.5" cy="32" r="3.6" fill="#fff"/>
+</svg>
