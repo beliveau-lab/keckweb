@@ -294,6 +294,50 @@ nav a.active {
   text-transform: uppercase;
 }
 
+/* Hero legibility over the brighter HeLa background */
+.home-hero .eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+}
+.home-hero .eyebrow::before { background: #ffffff; height: 2px; }
+.home-hero h1 { text-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 28px rgba(0,0,0,0.45); }
+.home-hero h1 em { color: #dcc2ff; }
+.home-hero .subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 44rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 18px rgba(0,0,0,0.7);
+}
+.home-hero .btn-secondary {
+  color: #ffffff;
+  font-weight: 600;
+  background: rgba(10,10,15,0.55);
+  border-color: rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.home-hero .btn-secondary:hover { background: rgba(10,10,15,0.75); border-color: #ffffff; }
+.home-hero .hero-stats {
+  background: rgba(10,10,15,0.6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 1.75rem 2.25rem;
+}
+.home-hero .hero-stat { border-right-color: rgba(255,255,255,0.18); padding-right: 1.75rem; margin-right: 1.75rem; }
+.home-hero .hero-stat:last-child { padding-right: 0; margin-right: 0; }
+.home-hero .hero-stat .slbl {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.92);
+}
+
 /* ══════════════════════════════════════════
    PAGE HERO
 ══════════════════════════════════════════ */
