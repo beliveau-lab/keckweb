@@ -2064,8 +2064,34 @@ nav a { padding: 0 0.62rem; }
    LOGO MARK + fixed-size header wordmark
    (px, not rem, so the header looks identical on every page and screen width)
 ══════════════════════════════════════════ */
-.logo-mark-img { width: 36px; height: 36px; flex-shrink: 0; display: block; }
-.fb-mark-img { width: 30px; height: 30px; flex-shrink: 0; display: block; }
+.logo-mark-img { width: 42px; height: 42px; flex-shrink: 0; display: block; border-radius: 8px; }
+.fb-mark-img { width: 34px; height: 34px; flex-shrink: 0; display: block; border-radius: 7px; }
 .logo { gap: 12px; }
 .logo-text .l1 { font-size: 12.5px; letter-spacing: 0.1em; }
 .logo-text .l2 { font-size: 15.5px; }
+
+/* ══════════════════════════════════════════
+   INNER PAGES — calibrated to the homepage
+   Long-form text on white reads larger than card text on dark, so inner
+   pages step down slightly to match the homepage's visual weight.
+══════════════════════════════════════════ */
+.page-hero { padding: 4rem 3rem 3.5rem; }
+.page-hero h1 { font-size: clamp(2rem, 3.6vw, 2.9rem); }
+.page-hero p { font-size: 1.12rem; }
+.page-hero .eyebrow { font-size: 0.8rem; margin-bottom: 1rem; }
+
+.container { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.container h2 { font-size: 1.75rem; margin-bottom: 0.9rem; }
+.container h3 { font-size: 1.15rem; margin-top: 2.2rem; margin-bottom: 0.55rem; }
+.container p, .container li { font-size: 0.97rem; line-height: 1.75; }
+.container dt { font-size: 0.97rem; }
+.container dd { font-size: 0.94rem; line-height: 1.65; }
+.container .section-body { font-size: 1.02rem; }
+.info-box p { font-size: 0.97rem; }
+.equipment-card-desc, .resource-card p, .team-dept { font-size: 0.92rem; }
+.rates-table td { font-size: 0.92rem; }
+
+@media (max-width: 700px) {
+  .page-hero { padding: 3rem 1.5rem; }
+  .container { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+}
