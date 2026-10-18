@@ -2423,3 +2423,75 @@ body.page-inner .btn-book:disabled { opacity: 0.6; }
 footer, .footer-col a, .footer-brand p a { color: rgba(255,255,255,0.82); }
 .footer-brand p, .footer-bottom, .footer-bottom a { color: rgba(255,255,255,0.62); }
 .footer-col h4 { color: rgba(255,255,255,0.7); }
+
+/* ══════════════════════════════════════════
+   CALM PASS — lighter, cleaner, less visual noise (whole site)
+══════════════════════════════════════════ */
+:root {
+  --dark-2: #12131a;            /* page surface: a touch softer than near-black */
+  --dark-3: #1a1c25;
+  --calm-line: rgba(255,255,255,0.08);
+}
+
+/* 1. Remove decorative texture and glows */
+.home-hero::before { background-image: linear-gradient(90deg, rgba(10,10,15,0.4) 0%, rgba(10,10,15,0.15) 45%, rgba(10,10,15,0) 100%) !important; background-size: auto !important; }
+.page-hero::before { background-image: linear-gradient(90deg, rgba(10,10,15,0.55) 0%, rgba(10,10,15,0.25) 50%, rgba(10,10,15,0.05) 100%) !important; background-size: auto !important; }
+.home-hero::after, .page-hero::after { display: none; }
+
+/* 2. Softer text shadows: just enough to read over the images */
+.home-hero h1, .page-hero h1 { text-shadow: 0 1px 12px rgba(0,0,0,0.45); }
+.home-hero .subtitle, .page-hero p, .home-hero .eyebrow { text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+
+/* 3. Small labels: plain sentence-case text instead of tracked mono caps */
+.section-label, .notice-label, .fi-tag, .feature-item .fi-tag,
+.resource-card .rc-tag, .team-role, .spec-group-title, .cib-label,
+.container .rates-group h4, .btn-book .bk-badge, .btn-book .bk-soon,
+.news-date, .tl-year, .contact-card .cc-type, .spec-block-header .badge {
+  font-family: var(--font-body) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 600;
+}
+.section-label::before, .home-hero .eyebrow::before { display: none; }
+.section-label { font-size: 0.95rem; }
+.feature-item .fi-tag { font-size: 0.88rem; margin-bottom: 0.5rem; }
+.notice-label { font-size: 0.9rem; margin-bottom: 0.35rem; }
+.resource-card .rc-tag, .team-role, .spec-group-title, .cib-label { font-size: 0.85rem; }
+.btn-book .bk-badge, .btn-book .bk-soon { font-size: 0.75rem; }
+.home-hero .eyebrow { font-family: var(--font-body); text-transform: none; letter-spacing: 0.01em; font-size: 1rem; font-weight: 600; }
+
+/* 4. Fewer boxes and borders */
+.home-hero .hero-stats {
+  background: none !important;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  border: 0; border-top: 1px solid rgba(255,255,255,0.22);
+  border-radius: 0;
+  padding: 2rem 0 0;
+}
+.home-hero .hero-stat { border-right-color: rgba(255,255,255,0.14); }
+.features-grid { border-color: var(--calm-line); background: var(--calm-line); }
+.feature-item { padding: 2.5rem 2.25rem; }
+.feature-item:hover { background: var(--dark-2); }
+
+/* 5. More air and one consistent rhythm */
+.section { padding-top: 6rem; padding-bottom: 6rem; }
+.section-title { margin-bottom: 1.1rem; }
+.page-hero ~ .section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+.container.doc { padding-top: 5rem; padding-bottom: 6rem; }
+.doc-sec { padding: 3.75rem 0; border-top-color: var(--calm-line); }
+body.page-inner { --doc-line: var(--calm-line); }
+
+/* 6. Calmer buttons: one radius, no heavy borders */
+.btn-primary, .btn-secondary, .btn-outline, .btn-book-inline, .btn-submit,
+.equipment-btn-specs, .equipment-btn-book { border-radius: 6px; }
+.home-hero .btn-secondary { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.35); }
+
+/* 7. Footer: quieter */
+footer { padding-top: 4.5rem; }
+.footer-content { border-bottom-color: var(--calm-line); }
+.footer-col h4 { font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: 0.9rem; font-weight: 600; color: #fff; }
+.hero-stat .snum { font-family: var(--font-body); font-weight: 700; letter-spacing: -0.03em; }
+.hero-stat .slbl { text-transform: none; letter-spacing: 0; font-size: 0.92rem; font-weight: 500; color: rgba(255,255,255,0.85); }
+.home-hero .hero-stats { background: linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,0.55) 100%) !important; padding-bottom: 1.25rem; }
+.hero-stat .snum, .hero-stat .slbl { text-shadow: 0 1px 10px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.6); }
+.hero-stat .slbl { color: #fff; }
