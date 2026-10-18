@@ -2095,3 +2095,9 @@ nav a { padding: 0 0.62rem; }
   .page-hero { padding: 3rem 1.5rem; }
   .container { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 }
+
+/* Inner pages built from .section blocks (e.g. Equipment) use the same
+   heading/body sizes as .container pages; the homepage is unaffected. */
+.page-hero ~ .section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.page-hero ~ .section .section-title { font-size: 1.75rem; margin-bottom: 0.9rem; }
+.page-hero ~ .section .section-body { font-size: 0.97rem; line-height: 1.75; font-weight: 400; color: var(--ink-soft); }
