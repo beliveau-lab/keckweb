@@ -2254,3 +2254,132 @@ nav a { padding: 0 0.62rem; }
 }
 .container .ship-map a { font-weight: 600; }
 @media (max-width: 800px) { .ship-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* ══════════════════════════════════════════
+   INNER PAGES — DARK THEME (matches the homepage)
+   Scoped to <body class="page-inner">; the homepage has no body class.
+══════════════════════════════════════════ */
+body.page-inner {
+  --doc-ink: #ffffff;
+  --doc-body: rgba(255,255,255,0.74);
+  --doc-muted: rgba(255,255,255,0.52);
+  --doc-line: rgba(255,255,255,0.10);
+  --doc-wash: var(--dark-3);
+  --card: #15151e;
+  --card-hover: #1c1c28;
+  --link: var(--purple-xl);
+  --ink: #ffffff;
+  --ink-mid: rgba(255,255,255,0.8);
+  --ink-soft: rgba(255,255,255,0.74);
+  --rule-light: rgba(255,255,255,0.10);
+  background: var(--dark-2);
+  color: var(--doc-body);
+}
+
+/* Surfaces */
+body.page-inner .container,
+body.page-inner .section,
+body.page-inner .section.light,
+body.page-inner .section.tinted { background: var(--dark-2); }
+body.page-inner .section.tinted { background: var(--dark); }
+
+/* Type */
+body.page-inner h1, body.page-inner h2, body.page-inner h3, body.page-inner h4,
+body.page-inner .section-title,
+body.page-inner .container h2, body.page-inner .container h3 { color: var(--doc-ink); }
+body.page-inner .container p, body.page-inner .container li,
+body.page-inner .section-body, body.page-inner .page-hero ~ .section .section-body { color: var(--doc-body); }
+body.page-inner .container strong { color: var(--doc-ink); }
+body.page-inner .container a, body.page-inner .section a:not([class]) { color: var(--link); }
+body.page-inner .container hr { border-color: var(--doc-line); }
+
+/* Call-outs: same dark boxes as the homepage About section */
+body.page-inner .container .info-box { background: var(--dark-3); border-left-color: var(--purple-lt); }
+body.page-inner .container .info-box p { color: var(--doc-body); }
+body.page-inner .container .info-box .notice-label,
+body.page-inner .container .info-box a { color: var(--purple-xl); }
+body.page-inner .container .warning-box { background: rgba(217,119,6,0.12); border-left-color: #f59e0b; }
+body.page-inner .container .warning-box p { color: rgba(255,255,255,0.8); }
+body.page-inner .container .warning-box .notice-label { color: #fbbf24; }
+body.page-inner .container .warning-box a { color: #fcd34d; }
+body.page-inner .container .success-box { background: rgba(5,150,105,0.12); border-left-color: #10b981; }
+body.page-inner .container .success-box p { color: rgba(255,255,255,0.8); }
+body.page-inner .container .success-box a { color: #a7f3d0; }
+body.page-inner .container .success-box .notice-label { color: #6ee7b7; }
+body.page-inner .container .letter-box { background: var(--dark-3); }
+body.page-inner .container .letter-box a { color: var(--purple-xl); }
+
+/* Buttons */
+body.page-inner .btn-primary, body.page-inner .container a.btn-book-inline { background: var(--purple); color: #fff; }
+body.page-inner .btn-primary:hover, body.page-inner .container a.btn-book-inline:hover { background: var(--purple-lt); }
+body.page-inner .btn-outline { color: #fff; border-color: rgba(255,255,255,0.35); }
+
+/* Cards and grids */
+body.page-inner .equipment-grid,
+body.page-inner .schedule-grid,
+body.page-inner .resource-grid,
+body.page-inner .team-grid { background: var(--doc-line) !important; border-color: var(--doc-line); }
+body.page-inner .equipment-card,
+body.page-inner .btn-book,
+body.page-inner .resource-card,
+body.page-inner .team-card { background: var(--card); border-color: var(--doc-line); color: var(--doc-body); }
+body.page-inner .equipment-card:hover,
+body.page-inner .btn-book:hover,
+body.page-inner .resource-card:hover { background: var(--card-hover); }
+body.page-inner .btn-book:disabled:hover { background: var(--card); }
+body.page-inner .equipment-card-title,
+body.page-inner .btn-book .bk-label,
+body.page-inner .resource-card h3,
+body.page-inner .team-name { color: #fff; }
+body.page-inner .equipment-card-desc,
+body.page-inner .btn-book .bk-sub,
+body.page-inner .resource-card p,
+body.page-inner .team-dept { color: var(--doc-body); }
+body.page-inner .team-dept strong { color: #fff; }
+body.page-inner .resource-card .rc-tag,
+body.page-inner .team-role,
+body.page-inner .spec-group-title { color: var(--purple-xl); }
+body.page-inner .resource-card .rc-links a { color: var(--purple-xl); }
+
+/* Rates tables */
+body.page-inner .rates-table { border-color: var(--doc-line); }
+body.page-inner .rates-table thead th { background: var(--dark-3); color: rgba(255,255,255,0.85); border-color: var(--doc-line); }
+body.page-inner .rates-table thead th span { color: var(--doc-muted); }
+body.page-inner .rates-table td { color: var(--doc-body); border-color: var(--doc-line); }
+body.page-inner .rates-table td:first-child { color: #fff; }
+body.page-inner .rates-table td.rate-nocharge { color: #6ee7b7; }
+body.page-inner .container .rates-group h4 { color: var(--purple-xl); }
+body.page-inner .container .rates-note { color: var(--doc-muted); }
+
+/* FAQ */
+body.page-inner .faq-item, body.page-inner .faq-item:first-child { border-color: var(--doc-line); }
+body.page-inner .faq-question { color: #fff; }
+body.page-inner .faq-question:hover,
+body.page-inner .faq-item.active .faq-question { color: var(--purple-xl); }
+body.page-inner .faq-answer p { color: var(--doc-body); }
+
+/* Contact form */
+body.page-inner .contact-form { background: var(--card); border-color: var(--doc-line); }
+body.page-inner .form-group label { color: rgba(255,255,255,0.85); }
+body.page-inner .form-group input,
+body.page-inner .form-group select,
+body.page-inner .form-group textarea { background: var(--dark); color: #fff; border-color: rgba(255,255,255,0.16); }
+body.page-inner .form-group input::placeholder,
+body.page-inner .form-group textarea::placeholder { color: rgba(255,255,255,0.38); }
+body.page-inner .btn-submit { background: var(--purple); color: #fff; }
+body.page-inner .cib-label { color: var(--purple-xl); }
+body.page-inner .contact-info-block p { color: var(--doc-body); }
+
+/* Equipment page spec block */
+body.page-inner .spec-block { background: var(--card); border-color: var(--doc-line); }
+body.page-inner .spec-block-body li, body.page-inner .spec-block-body p { color: var(--doc-body); }
+body.page-inner .ship-item address { color: #fff; }
+body.page-inner .services-note { background: var(--dark-3); border-color: var(--doc-line); }
+body.page-inner .services-note p { color: var(--doc-body); }
+body.page-inner .btn-book .bk-soon { background: rgba(255,255,255,0.08); color: var(--doc-muted); }
+body.page-inner .ht-year { color: var(--purple-xl); }
+.cib-link { font-size: 0.9rem; font-weight: 500; text-decoration: none; }
+body.page-inner .container a.cib-link { color: var(--purple-xl); }
+/* Equipment grid: no grey filler cell; cards carry their own hairline */
+body.page-inner .equipment-grid { background: var(--dark-2) !important; gap: 0; }
+body.page-inner .equipment-card { box-shadow: 0 0 0 0.5px var(--doc-line); }
