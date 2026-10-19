@@ -2496,6 +2496,11 @@ footer { padding-top: 4.5rem; }
 .hero-stat .snum, .hero-stat .slbl { text-shadow: 0 1px 10px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.6); }
 .hero-stat .slbl { color: #fff; }
 
+/* Text fills the available width before wrapping (no reading-measure caps) */
+.container.doc p, .container.doc li, .container p, .container li,
+.doc-intro, .container .rates-note, .container .rates-period,
+.home-hero .subtitle, .page-hero p, .section-body { max-width: none; }
+
 /* Vector logo mark: drawn for dark backgrounds, so no white tile */
 .logo-mark-img { width: 44px; height: 45px; border-radius: 0; background: none; }
 .fb-mark-img { width: 36px; height: 37px; border-radius: 0; background: none; }
