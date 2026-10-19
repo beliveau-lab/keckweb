@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 500" role="img" aria-label="Keck Microscopy Center">
-  <g transform="translate(-10 -12)"><defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 501" role="img" aria-label="Keck Microscopy Center">
+  <g transform="translate(-14 -36)"><defs>
     <linearGradient id="iring" x1="0.1" y1="1" x2="0.95" y2="0.05">
       <stop offset="0" stop-color="#5aa9ec"/><stop offset="0.5" stop-color="#2a6fb8"/><stop offset="1" stop-color="#7cc4ff"/>
     </linearGradient>
@@ -118,17 +118,5 @@
     <rect x="-34" y="0" width="68" height="62" rx="4"/>
     <rect x="-34" y="68" width="68" height="20" rx="3"/>
     <path d="M-26 94 H26 L18 124 H-18 Z"/>
-  </g>
-  <g stroke="#7cc4ff" stroke-linecap="round" stroke-width="6.5" fill="none">
-    <path d="M438 314 C456 312 466 304 476 290"/><path d="M476 290 L486 256"/><path d="M476 290 L516 282"/>
-    <path d="M438 314 C458 322 470 334 480 350"/><path d="M480 350 L520 354"/><path d="M480 350 L488 388"/>
-    <path d="M446 300 L440 262"/><path d="M446 330 L432 366"/>
-    <path d="M498 286 L522 262"/><path d="M500 352 L526 376"/>
-  </g>
-  <g fill="#7cc4ff">
-    <circle cx="438" cy="314" r="16"/>
-    <circle cx="486" cy="256" r="8"/><circle cx="516" cy="282" r="8"/><circle cx="520" cy="354" r="8"/>
-    <circle cx="488" cy="388" r="8"/><circle cx="440" cy="262" r="8"/><circle cx="432" cy="366" r="8"/>
-    <circle cx="522" cy="262" r="7"/><circle cx="526" cy="376" r="7"/>
   </g></g>
 </svg>
