@@ -2504,3 +2504,26 @@ footer { padding-top: 4.5rem; }
 /* Vector logo mark: drawn for dark backgrounds, so no white tile */
 .logo-mark-img { width: 44px; height: 45px; border-radius: 0; background: none; }
 .fb-mark-img { width: 36px; height: 37px; border-radius: 0; background: none; }
+
+/* Homepage slogan band */
+.slogan {
+  background: var(--dark);
+  padding: 5.5rem 3rem;
+  text-align: center;
+  border-top: 1px solid var(--calm-line);
+  border-bottom: 1px solid var(--calm-line);
+}
+.slogan-text {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: clamp(1.9rem, 3.9vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  background: linear-gradient(90deg, #3b6cff, #22c3e6 25%, #3ddc6a 50%, #f5d33b 75%, #ff4444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 700px) { .slogan { padding: 3.75rem 1.5rem; } }
