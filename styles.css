@@ -2500,3 +2500,7 @@ footer { padding-top: 4.5rem; }
 .container.doc p, .container.doc li, .container p, .container li,
 .doc-intro, .container .rates-note, .container .rates-period,
 .home-hero .subtitle, .page-hero p, .section-body { max-width: none; }
+
+/* Vector logo mark: drawn for dark backgrounds, so no white tile */
+.logo-mark-img { width: 44px; height: 45px; border-radius: 0; background: none; }
+.fb-mark-img { width: 36px; height: 37px; border-radius: 0; background: none; }
