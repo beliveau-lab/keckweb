@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 501" role="img" aria-label="Keck Microscopy Center">
   <g transform="translate(-14 -36)"><defs>
     <linearGradient id="iring" x1="0.1" y1="1" x2="0.95" y2="0.05">
-      <stop offset="0" stop-color="#3b82f6"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ef4444"/>
+      <stop offset="0.000" stop-color="#3b6cff"/><stop offset="0.250" stop-color="#22c3e6"/><stop offset="0.500" stop-color="#3ddc6a"/><stop offset="0.750" stop-color="#f5d33b"/><stop offset="1.000" stop-color="#ff4444"/>
     </linearGradient>
     <radialGradient id="ifield" cx="0.45" cy="0.45" r="0.62">
       <stop offset="0" stop-color="#17234f"/><stop offset="1" stop-color="#050816"/>
@@ -10,7 +10,7 @@
       <feGaussianBlur stdDeviation="1.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="ik" gradientUnits="userSpaceOnUse" x1="42" y1="458" x2="362" y2="64"><stop offset="0" stop-color="#3b82f6"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <linearGradient id="ik" gradientUnits="userSpaceOnUse" x1="42" y1="458" x2="362" y2="64"><stop offset="0.000" stop-color="#3b6cff"/><stop offset="0.250" stop-color="#22c3e6"/><stop offset="0.500" stop-color="#3ddc6a"/><stop offset="0.750" stop-color="#f5d33b"/><stop offset="1.000" stop-color="#ff4444"/></linearGradient>
     <clipPath id="ifc"><circle cx="305" cy="343" r="95"/></clipPath>
   </defs>
   <path d="M 425.8 219.4 A 152 152 0 1 0 422.4 410.7" fill="none" stroke="url(#iring)" stroke-width="28"/>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Keck Microscopy Center">
-  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="10" y1="54" x2="54" y2="10"><stop offset="0" stop-color="#3b82f6"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="10" y1="54" x2="54" y2="10"><stop offset="0" stop-color="#3b6cff"/><stop offset=".25" stop-color="#22c3e6"/><stop offset=".5" stop-color="#3ddc6a"/><stop offset=".75" stop-color="#f5d33b"/><stop offset="1" stop-color="#ff4444"/></linearGradient></defs>
   <rect width="64" height="64" rx="14" fill="#0d0f17"/>
   <rect x="12" y="12" width="8" height="40" fill="url(#fg)"/>
   <polygon points="20,30 38,12 46,12 20,38" fill="url(#fg)"/>
