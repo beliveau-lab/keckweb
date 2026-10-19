@@ -2536,3 +2536,7 @@ footer { padding-top: 4.5rem; }
   nav::-webkit-scrollbar { display: none; }
   nav ul { flex-shrink: 0; }
 }
+
+/* Section headings on Equipment and Contact match the other inner pages */
+body.page-inner .page-hero ~ .section .section-title,
+body.page-inner .container h2 { font-size: 1.4rem; letter-spacing: -0.03em; line-height: 1.2; }
