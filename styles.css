@@ -2527,3 +2527,12 @@ footer { padding-top: 4.5rem; }
   color: transparent;
 }
 @media (max-width: 700px) { .slogan { padding: 3.75rem 1.5rem; } }
+
+/* Mobile/tablet nav: start the links at the left so the whole row can be
+   swiped. With flex-end the overflow spilled off the left edge, where it
+   cannot be scrolled to. */
+@media (max-width: 1000px) {
+  nav { justify-content: flex-start; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
+  nav ul { flex-shrink: 0; }
+}
