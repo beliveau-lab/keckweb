@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 501" role="img" aria-label="Keck Microscopy Center">
   <g transform="translate(-14 -36)"><defs>
     <linearGradient id="iring" x1="0.1" y1="1" x2="0.95" y2="0.05">
-      <stop offset="0" stop-color="#5aa9ec"/><stop offset="0.5" stop-color="#2a6fb8"/><stop offset="1" stop-color="#7cc4ff"/>
+      <stop offset="0" stop-color="#3b82f6"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ef4444"/>
     </linearGradient>
     <radialGradient id="ifield" cx="0.45" cy="0.45" r="0.62">
       <stop offset="0" stop-color="#17234f"/><stop offset="1" stop-color="#050816"/>
@@ -10,6 +10,7 @@
       <feGaussianBlur stdDeviation="1.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <linearGradient id="ik" gradientUnits="userSpaceOnUse" x1="42" y1="458" x2="362" y2="64"><stop offset="0" stop-color="#3b82f6"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
     <clipPath id="ifc"><circle cx="305" cy="343" r="95"/></clipPath>
   </defs>
   <path d="M 425.8 219.4 A 152 152 0 1 0 422.4 410.7" fill="none" stroke="url(#iring)" stroke-width="28"/>
@@ -112,8 +113,8 @@
     <circle cx="243.0" cy="313.0" r="5" fill="#3d6dff" opacity="0.6"/>
   </g>
   <circle cx="305" cy="343" r="95" fill="none" stroke="#0d0f17" stroke-width="3"/>
-  <polygon points="106,206 296,64 362,64 106,272" fill="#ffffff" stroke="#0d0f17" stroke-width="6" paint-order="stroke"/>
-  <rect x="42" y="64" width="64" height="394" fill="#ffffff"/>
+  <polygon points="106,206 296,64 362,64 106,272" fill="url(#ik)" stroke="#0d0f17" stroke-width="6" paint-order="stroke"/>
+  <rect x="42" y="64" width="64" height="394" fill="url(#ik)"/>
   <g transform="translate(250 176) rotate(-22)" fill="#ffffff" stroke="#0d0f17" stroke-width="6" paint-order="stroke">
     <rect x="-34" y="0" width="68" height="62" rx="4"/>
     <rect x="-34" y="68" width="68" height="20" rx="3"/>
