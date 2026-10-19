@@ -2527,3 +2527,17 @@ footer { padding-top: 4.5rem; }
   color: transparent;
 }
 @media (max-width: 700px) { .slogan { padding: 3.75rem 1.5rem; } }
+
+/* Slogan now sits inside the hero, over the HeLa image (replaces the band) */
+.home-hero .slogan-text {
+  display: block;
+  text-align: center;
+  margin: 5.5rem auto 0;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.85)) drop-shadow(0 0 2px rgba(0,0,0,0.7));
+}
+.home-hero { padding-top: 6.5rem; padding-bottom: 4.5rem; background-position: 100% 50%; }
+.home-hero .hero-stats { margin-top: 3.5rem; }
+.home-hero .slogan-text { margin-top: 3.75rem; font-size: clamp(1.7rem, 3.4vw, 2.75rem); white-space: nowrap; }
+@media (max-width: 900px) { .home-hero .slogan-text { white-space: normal; } }
+@media (max-width: 700px) { .home-hero { padding-top: 4rem; padding-bottom: 3.5rem; } }
+@media (max-width: 900px) { .home-hero { background-position: 50% 50%; } }
