@@ -2556,3 +2556,61 @@ body.page-inner .container h2 { font-size: 1.4rem; letter-spacing: -0.03em; line
 @media (min-width: 701px) and (max-width: 1000px) {
   .features-grid > .feature-item:last-child { grid-column: 1 / -1; }
 }
+
+/* Equipment page: compact cards. Each card is a separate tile with a smaller
+   photo beside the text (photo on top on phones), so the images no longer
+   dominate the page. */
+body.page-inner .equipment-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+body.page-inner .equipment-card {
+  display: grid;
+  grid-template-columns: 47% 1fr;
+  border: 1px solid var(--doc-line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+}
+/* Every photo gets the same 4:3 frame and shows in full (no cropping).
+   Wider photos are padded with white, which matches the Zeiss product shot. */
+body.page-inner .equipment-card-img {
+  align-self: center;
+  width: calc(100% - 1.25rem);
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  margin-left: 1.25rem;
+  border-radius: 6px;
+  background: none;
+}
+body.page-inner .equipment-card-img.on-white { background: #fff; }
+body.page-inner .equipment-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.35rem;
+}
+body.page-inner .equipment-card-desc { margin-bottom: 0.9rem; }
+body.page-inner .equipment-button-row { margin-top: auto; gap: 0.6rem; }
+body.page-inner .equipment-btn-specs,
+body.page-inner .equipment-btn-book { min-height: 38px; padding: 8px 12px; font-size: 13px; }
+body.page-inner .equipment-btn-book {
+  background: transparent;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+body.page-inner .equipment-btn-book:hover {
+  background: rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55);
+}
+@media (max-width: 1000px) {
+  body.page-inner .equipment-grid { grid-template-columns: 1fr; max-width: 760px !important; }
+}
+@media (max-width: 560px) {
+  body.page-inner .equipment-card { grid-template-columns: 1fr; }
+  body.page-inner .equipment-card-img { width: 100%; margin: 0; border-radius: 0; }
+  body.page-inner .equipment-button-row { flex-direction: row; }
+}
