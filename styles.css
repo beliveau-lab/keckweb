@@ -2575,17 +2575,19 @@ body.page-inner .equipment-card {
   overflow: hidden;
   box-shadow: none;
 }
-/* Photos keep their full frame and original proportions (no cropping) */
+/* Every photo gets the same 4:3 frame and shows in full (no cropping).
+   Wider photos are padded with white, which matches the Zeiss product shot. */
 body.page-inner .equipment-card-img {
   align-self: center;
   width: calc(100% - 1.25rem);
   height: auto;
-  aspect-ratio: auto;
+  aspect-ratio: 4/3;
   object-fit: contain;
   margin-left: 1.25rem;
   border-radius: 6px;
   background: none;
 }
+body.page-inner .equipment-card-img.on-white { background: #fff; }
 body.page-inner .equipment-card-body {
   display: flex;
   flex-direction: column;
