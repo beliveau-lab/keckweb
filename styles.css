@@ -2569,7 +2569,7 @@ body.page-inner .equipment-grid {
 }
 body.page-inner .equipment-card {
   display: grid;
-  grid-template-columns: 38% 1fr;
+  grid-template-columns: 47% 1fr;
   border: 1px solid var(--doc-line);
   border-radius: 10px;
   overflow: hidden;
