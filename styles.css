@@ -2237,7 +2237,7 @@ nav a { padding: 0 0.62rem; }
 @media (min-width: 900px) { .schedule-grid { grid-template-columns: repeat(2, 1fr); } }
 /* Four equipment cards (Environmental Control hidden) sit in an even 2 x 2 grid.
    Remove this rule if the fifth card is restored. */
-@media (min-width: 640px) { .equipment-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 701px) { .equipment-grid { grid-template-columns: repeat(2, 1fr); } }
 /* Contact: shipping & deliveries */
 .container .doc.shipping { margin-top: 4.5rem; padding-top: 3.25rem; border-top: 1px solid var(--doc-line); }
 .container .doc.shipping .doc-sec { border-top: 0; padding: 0; }
@@ -2544,3 +2544,15 @@ footer { padding-top: 4.5rem; }
 /* Section headings on Equipment and Contact match the other inner pages */
 body.page-inner .page-hero ~ .section .section-title,
 body.page-inner .container h2 { font-size: 1.4rem; letter-spacing: -0.03em; line-height: 1.2; }
+
+/* Home "What we offer": five items (Environmental Control hidden) without empty cells.
+   Wide: top row of three, bottom row of two. Tablet: last item spans both columns.
+   Remove these rules if the sixth item is restored. */
+@media (min-width: 1001px) {
+  .features-grid { grid-template-columns: repeat(6, 1fr); }
+  .features-grid > .feature-item { grid-column: span 2; }
+  .features-grid > .feature-item:nth-child(n+4) { grid-column: span 3; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .features-grid > .feature-item:last-child { grid-column: 1 / -1; }
+}
