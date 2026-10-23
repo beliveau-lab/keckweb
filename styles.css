@@ -2575,10 +2575,16 @@ body.page-inner .equipment-card {
   overflow: hidden;
   box-shadow: none;
 }
+/* Photos keep their full frame and original proportions (no cropping) */
 body.page-inner .equipment-card-img {
-  height: 100%;
-  min-height: 190px;
+  align-self: center;
+  width: calc(100% - 1.25rem);
+  height: auto;
   aspect-ratio: auto;
+  object-fit: contain;
+  margin-left: 1.25rem;
+  border-radius: 6px;
+  background: none;
 }
 body.page-inner .equipment-card-body {
   display: flex;
@@ -2603,6 +2609,6 @@ body.page-inner .equipment-btn-book:hover {
 }
 @media (max-width: 560px) {
   body.page-inner .equipment-card { grid-template-columns: 1fr; }
-  body.page-inner .equipment-card-img { height: auto; min-height: 0; aspect-ratio: 16/9; }
+  body.page-inner .equipment-card-img { width: 100%; margin: 0; border-radius: 0; }
   body.page-inner .equipment-button-row { flex-direction: row; }
 }
